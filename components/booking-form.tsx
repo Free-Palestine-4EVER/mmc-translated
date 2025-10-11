@@ -344,7 +344,9 @@ export function BookingForm({ tourName, packageName }: BookingFormProps) {
 
   const [selectedTours, setSelectedTours] = useState<string[]>([])
   const [totalPrice, setTotalPrice] = useState(0)
+  const [discountedPrice, setDiscountedPrice] = useState(0)
   const [submitted, setSubmitted] = useState(false)
+  const DISCOUNT_PERCENTAGE = 0.15 // 15% discount
 
   // Initialize selected tours if tourName is provided
   useEffect(() => {
@@ -372,6 +374,7 @@ export function BookingForm({ tourName, packageName }: BookingFormProps) {
   // Calculate total price whenever relevant fields change
   useEffect(() => {
     let total = 0
+    let hotAirBalloonPrice = 0
 
     // Check if any selected tour qualifies for free tented camp accommodation
     const qualifiesForFreeTentedCamp = selectedTours.some((tourId) => {
@@ -405,6 +408,11 @@ export function BookingForm({ tourName, packageName }: BookingFormProps) {
           if (tour.id === "stargazing") {
             // Special calculation for stargazing
             total += calculateStargazingPrice(formData.numPeople) * formData.numPeople
+          } else if (tour.id === "hot-air-balloon") {
+            // Hot air balloon - no discount, track separately
+            const price = getTourPrice(tour, formData.numPeople) * formData.numPeople
+            hotAirBalloonPrice += price
+            total += price
           } else {
             total += getTourPrice(tour, formData.numPeople) * formData.numPeople
           }
@@ -413,6 +421,11 @@ export function BookingForm({ tourName, packageName }: BookingFormProps) {
     }
 
     setTotalPrice(total)
+
+    // Calculate discounted price (15% off, excluding hot air balloon)
+    const discountableAmount = total - hotAirBalloonPrice
+    const discounted = (discountableAmount * (1 - DISCOUNT_PERCENTAGE)) + hotAirBalloonPrice
+    setDiscountedPrice(discounted)
   }, [formData.accommodation, formData.numPeople, selectedTours, formData.package])
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -464,6 +477,8 @@ export function BookingForm({ tourName, packageName }: BookingFormProps) {
           }
         : null,
       totalPrice,
+      discountAmount: totalPrice * DISCOUNT_PERCENTAGE,
+      finalPrice: discountedPrice,
     }
 
     // Send the email
@@ -886,8 +901,24 @@ export function BookingForm({ tourName, packageName }: BookingFormProps) {
             })}
 
           <div className="flex justify-between pt-2 border-t mt-2">
-            <span className="text-lg font-bold">Total:</span>
-            <span className="text-lg font-bold">{totalPrice} JOD</span>
+            <span className="text-lg font-semibold">Subtotal:</span>
+            <span className="text-lg font-semibold">{totalPrice.toFixed(2)} JOD</span>
+          </div>
+
+          <div className="flex justify-between pt-2 text-green-600">
+            <span className="text-base font-semibold">Discount (15%):</span>
+            <span className="text-base font-semibold">-{(totalPrice * DISCOUNT_PERCENTAGE).toFixed(2)} JOD</span>
+          </div>
+
+          <div className="flex justify-between pt-2 border-t mt-2">
+            <span className="text-xl font-bold text-orange-600">Final Total:</span>
+            <span className="text-xl font-bold text-orange-600">{discountedPrice.toFixed(2)} JOD</span>
+          </div>
+
+          <div className="mt-3 p-2 bg-red-50 border border-red-200 rounded">
+            <p className="text-sm text-center">
+              <span className="font-bold text-red-600">15% DISCOUNT APPLIED!</span>
+            </p>
           </div>
         </div>
       </div>

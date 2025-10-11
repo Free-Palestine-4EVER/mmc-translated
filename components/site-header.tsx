@@ -463,7 +463,12 @@ export function SiteHeader() {
                   className="flex items-center justify-between w-full text-lg font-medium"
                   onClick={toggleMobileDesertExpanded}
                 >
-                  <span>Desert Experiences</span>
+                  <div className="flex items-center gap-2">
+                    <span>Desert Experiences</span>
+                    <span className="inline-block bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded">
+                      15% OFF
+                    </span>
+                  </div>
                   {mobileDesertExpanded ? (
                     <ChevronUp className="h-5 w-5 text-gray-500" />
                   ) : (

@@ -161,7 +161,7 @@ export default function DesertExperiencesPage() {
       <section className="relative bg-black text-white">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/desert-experiences-hero.jpg"
+            src="/images/full-day-jeep-hero.jpg"
             alt="Wadi Rum desert experiences with red sandstone mountains and Bedouin guide"
             fill
             className="object-cover opacity-60"

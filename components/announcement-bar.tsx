@@ -10,7 +10,7 @@ export function AnnouncementBar() {
   const marqueeText = announcements.join(" 　•　 ")
 
   return (
-    <div className="bg-amber-700 py-2 overflow-hidden">
+    <div className="py-2 overflow-hidden" style={{ backgroundColor: 'rgb(251, 191, 36)' }}>
       <div className="marquee-container">
         <div className="marquee-content">
           <span className="text-white font-medium">{marqueeText}</span>

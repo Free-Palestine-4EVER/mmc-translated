@@ -5,6 +5,7 @@ import "./globals.css"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { WhatsAppChat } from "@/components/whatsapp-chat"
+import { DiscountModal } from "@/components/discount-modal"
 import { generateLocalBusinessSchema } from "@/lib/schema"
 import Script from "next/script"
 
@@ -77,6 +78,7 @@ export default function RootLayout({
         <main>{children}</main>
         <SiteFooter />
         <WhatsAppChat />
+        <DiscountModal />
       </body>
     </html>
   )

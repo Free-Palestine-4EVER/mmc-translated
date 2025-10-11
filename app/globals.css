@@ -53,8 +53,11 @@
   * {
     @apply border-border;
   }
+  html,
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+    max-width: 100vw;
   }
   .container {
     @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
