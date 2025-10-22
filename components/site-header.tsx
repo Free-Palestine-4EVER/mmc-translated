@@ -15,8 +15,11 @@ import {
 import { X, Menu, ChevronDown, ChevronUp, Search } from "lucide-react"
 import { AnnouncementBar } from "@/components/announcement-bar"
 import { MobileSearch } from "./mobile-search"
+import { LanguageSelector } from "@/components/language-selector"
+import { useTranslation } from "@/lib/translation-context"
 
 export function SiteHeader() {
+  const { t } = useTranslation()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false)
   const [mobileDesertExpanded, setMobileDesertExpanded] = useState(false)
@@ -74,20 +77,20 @@ export function SiteHeader() {
             <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
                 <NavigationMenuLink className="text-sm font-medium transition-colors hover:text-amber-500 focus:outline-none">
-                  Home
+                  {t("nav.home")}
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-sm">Desert Experiences</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-sm">{t("nav.desertExperiences")}</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                   <li>
                     <Link href="/desert-experiences/half-day-jeep-tour" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Half Day Jeep Tour</div>
+                        <div className="text-sm font-medium leading-none">{t("tours.halfDay")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Experience the beauty of Wadi Rum in a 4-hour jeep tour
+                          {t("tours.halfDay.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -95,9 +98,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/desert-experiences/full-day-jeep-tour" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Full Day Jeep Tour</div>
+                        <div className="text-sm font-medium leading-none">{t("tours.fullDay")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          A complete day exploring Wadi Rum's magnificent landscapes
+                          {t("tours.fullDay.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -105,9 +108,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/desert-experiences/two-hour-jeep-tour" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">2 Hours Jeep Tour</div>
+                        <div className="text-sm font-medium leading-none">{t("tours.twoHour")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          A quick introduction to Wadi Rum's beauty
+                          {t("tours.twoHour.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -115,9 +118,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/desert-experiences/the-beduin-way" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">The Beduin Way</div>
+                        <div className="text-sm font-medium leading-none">{t("tours.beduinWay")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Experience the Bedouin way of life in the desert
+                          {t("tours.beduinWay.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -125,9 +128,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/desert-experiences/jebel-khash-route" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Jebel Khash Route</div>
+                        <div className="text-sm font-medium leading-none">{t("tours.jebelKhash")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          One day jeep tour on the incredible Jebel Khash route
+                          {t("tours.jebelKhash.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -135,9 +138,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/desert-experiences/jebel-khash-2" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Jebel Khash 2-Day</div>
+                        <div className="text-sm font-medium leading-none">{t("tours.jebelKhash2")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Jeep tour and hiking adventure in Jebel Khash
+                          {t("tours.jebelKhash2.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -145,9 +148,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/desert-experiences/hot-air-balloon" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Hot Air Balloon</div>
+                        <div className="text-sm font-medium leading-none">{t("experiences.hotAirBalloon")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Hot Air Balloon over Moon Valley
+                          {t("experiences.hotAirBalloon.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -155,9 +158,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/desert-experiences/jebel-burdah-climbing" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Burdah Arch Scrambling</div>
+                        <div className="text-sm font-medium leading-none">{t("tours.burdah")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Burdah Arch Scrambling and Hiking
+                          {t("tours.burdah.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -165,9 +168,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/desert-experiences/all-in-one-day" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">All in One Day</div>
+                        <div className="text-sm font-medium leading-none">{t("tours.allInOne")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Experience multiple activities in a single day
+                          {t("tours.allInOne.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -175,9 +178,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/desert-experiences/um-addami-climbing" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Jebel Um Addami Climbing</div>
+                        <div className="text-sm font-medium leading-none">{t("tours.umAddami")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Climbing Jordan's Highest Mountain
+                          {t("tours.umAddami.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -185,9 +188,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/desert-experiences/camel-rides" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Camel Rides</div>
+                        <div className="text-sm font-medium leading-none">{t("experiences.camelRides")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Sunrise or sunset camel ride
+                          {t("experiences.camelRides.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -195,9 +198,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/desert-experiences/trekking" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Trekking in the Wild</div>
+                        <div className="text-sm font-medium leading-none">{t("tours.trekking")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Guided trekking adventures in Wadi Rum
+                          {t("tours.trekking.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -205,9 +208,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/desert-experiences/night-walk-tour" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Night Walk Tour</div>
+                        <div className="text-sm font-medium leading-none">{t("tours.nightWalk")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Evening walk with tea under the stars
+                          {t("tours.nightWalk.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -215,9 +218,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/desert-experiences/stargazing-education" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Stargazing Education</div>
+                        <div className="text-sm font-medium leading-none">{t("tours.stargazing")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Learn to navigate by the stars
+                          {t("tours.stargazing.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -226,28 +229,28 @@ export function SiteHeader() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-sm">Packages</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-sm">{t("nav.packages")}</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                   <li className="col-span-2">
                     <Link href="/packages/bivouac" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Bivouac Camping Package</div>
+                        <div className="text-sm font-medium leading-none">{t("packages.bivouac")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Customizable desert camping with tours
+                          {t("packages.bivouac.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
                   </li>
                   <li className="col-span-2">
-                    <div className="mb-2 mt-3 font-medium px-3">2-Day Packages</div>
+                    <div className="mb-2 mt-3 font-medium px-3">{t("packages.2day")}</div>
                   </li>
                   <li>
                     <Link href="/packages/classic-adventure" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Classic Adventure</div>
+                        <div className="text-sm font-medium leading-none">{t("packages.classic")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Full-day jeep tour and half-day hiking
+                          {t("packages.classic.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -255,9 +258,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/packages/desert-explorer" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Desert Explorer</div>
+                        <div className="text-sm font-medium leading-none">{t("packages.explorer")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Jeep tour, camel ride, and hiking
+                          {t("packages.explorer.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -265,22 +268,22 @@ export function SiteHeader() {
                   <li>
                     <Link href="/packages/bedouin-experience" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Bedouin Experience</div>
+                        <div className="text-sm font-medium leading-none">{t("packages.bedouin")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Cultural immersion with traditional activities
+                          {t("packages.bedouin.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
                   </li>
                   <li className="col-span-2">
-                    <div className="mb-2 mt-3 font-medium px-3">3-Day Packages</div>
+                    <div className="mb-2 mt-3 font-medium px-3">{t("packages.3day")}</div>
                   </li>
                   <li>
                     <Link href="/packages/wadi-rum-discovery" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Wadi Rum Discovery</div>
+                        <div className="text-sm font-medium leading-none">{t("packages.discovery")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Comprehensive exploration of Wadi Rum
+                          {t("packages.discovery.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -288,9 +291,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/packages/ultimate-adventure" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Ultimate Adventure</div>
+                        <div className="text-sm font-medium leading-none">{t("packages.ultimate")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Climb Jordan's highest peak and explore remote areas
+                          {t("packages.ultimate.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -298,9 +301,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/packages/jordan-heights" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Jordan Heights</div>
+                        <div className="text-sm font-medium leading-none">{t("packages.heights")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Conquer Wadi Rum's iconic rock formations
+                          {t("packages.heights.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -309,15 +312,15 @@ export function SiteHeader() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-sm">Accommodation</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-sm">{t("nav.accommodation")}</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4">
                   <li>
                     <Link href="/accommodation/our-tented-camp" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Our Tented Camp</div>
+                        <div className="text-sm font-medium leading-none">{t("accommodation.tentedCamp")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Comfortable tents with modern amenities
+                          {t("accommodation.tentedCamp.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -325,9 +328,9 @@ export function SiteHeader() {
                   <li>
                     <Link href="/accommodation/bivouac" legacyBehavior passHref>
                       <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Bivouac Camping</div>
+                        <div className="text-sm font-medium leading-none">{t("accommodation.bivouac")}</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Sleep under the stars in the desert
+                          {t("accommodation.bivouac.desc")}
                         </p>
                       </NavigationMenuLink>
                     </Link>
@@ -338,7 +341,7 @@ export function SiteHeader() {
             <NavigationMenuItem>
               <Link href="/bubble-camp-partner" legacyBehavior passHref>
                 <NavigationMenuLink className="text-sm font-medium transition-colors hover:text-amber-500 focus:outline-none">
-                  Bubble Camp
+                  {t("nav.bubbleCamp")}
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -351,62 +354,56 @@ export function SiteHeader() {
                 passHref
               >
                 <NavigationMenuLink className="text-sm font-medium transition-colors hover:text-amber-500 focus:outline-none">
-                  Luxury Villas
+                  {t("nav.luxuryVillas")}
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/about-us" legacyBehavior passHref>
                 <NavigationMenuLink className="text-sm font-medium transition-colors hover:text-amber-500 focus:outline-none">
-                  About Us
+                  {t("nav.aboutUs")}
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/contact-us" legacyBehavior passHref>
                 <NavigationMenuLink className="text-sm font-medium transition-colors hover:text-amber-500 focus:outline-none">
-                  Contact us
+                  {t("nav.contactUs")}
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/useful-information" legacyBehavior passHref>
                 <NavigationMenuLink className="text-sm font-medium transition-colors hover:text-amber-500 focus:outline-none">
-                  Useful Info
+                  {t("nav.usefulInfo")}
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/faq" legacyBehavior passHref>
                 <NavigationMenuLink className="text-sm font-medium transition-colors hover:text-amber-500 focus:outline-none">
-                  FAQ
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/blog" legacyBehavior passHref>
-                <NavigationMenuLink className="text-sm font-medium transition-colors hover:text-amber-500 focus:outline-none">
-                  Blog
+                  {t("nav.faq")}
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <div className="flex items-center">
+        <div className="flex items-center gap-3">
+          <LanguageSelector />
           <Link href="/contact-us">
-            <Button className="bg-amber-500 hover:bg-amber-600">Book Now</Button>
+            <Button className="bg-amber-500 hover:bg-amber-600">{t("nav.bookNow")}</Button>
           </Link>
         </div>
       </div>
 
       {/* Mobile Header - Completely restructured with grid */}
-      <div className="md:hidden grid grid-cols-3 h-24 items-center px-4">
+      <div className="md:hidden grid grid-cols-4 h-24 items-center px-4 gap-2">
         <div className="col-span-1 flex justify-start">
           <button onClick={toggleMobileSearch} aria-label="Search" className="p-2">
-            <Search className="h-8 w-8 text-amber-500" />
+            <Search className="h-7 w-7 text-amber-500" />
           </button>
         </div>
-        <div className="col-span-1 flex justify-center">
+        <div className="col-span-2 flex justify-center">
           <Link href="/" className="flex items-center justify-center">
             <Image
               src="/images/new-logo.png"
@@ -418,9 +415,12 @@ export function SiteHeader() {
             />
           </Link>
         </div>
-        <div className="col-span-1 flex justify-end">
+        <div className="col-span-1 flex justify-end items-center gap-1">
+          <div className="scale-90">
+            <LanguageSelector />
+          </div>
           <button onClick={toggleMobileMenu} aria-label={mobileMenuOpen ? "Close menu" : "Open menu"} className="p-2">
-            <Menu className="h-8 w-8 text-amber-500" />
+            <Menu className="h-7 w-7 text-amber-500" />
           </button>
         </div>
       </div>
@@ -455,7 +455,7 @@ export function SiteHeader() {
                 className="py-2 text-lg font-medium border-b border-gray-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Home
+                {t("nav.home")}
               </Link>
 
               <div className="py-2 border-b border-gray-100">
@@ -464,9 +464,9 @@ export function SiteHeader() {
                   onClick={toggleMobileDesertExpanded}
                 >
                   <div className="flex items-center gap-2">
-                    <span>Desert Experiences</span>
+                    <span>{t("nav.desertExperiences")}</span>
                     <span className="inline-block bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded">
-                      15% OFF
+                      {t("desertExperiences.discount")}
                     </span>
                   </div>
                   {mobileDesertExpanded ? (
@@ -483,98 +483,98 @@ export function SiteHeader() {
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Half Day Jeep Tour
+                      {t("tours.halfDay")}
                     </Link>
                     <Link
                       href="/desert-experiences/full-day-jeep-tour"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Full Day Jeep Tour
+                      {t("tours.fullDay")}
                     </Link>
                     <Link
                       href="/desert-experiences/two-hour-jeep-tour"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      2 Hours Jeep Tour
+                      {t("tours.twoHour")}
                     </Link>
                     <Link
                       href="/desert-experiences/the-beduin-way"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      The Beduin Way
+                      {t("tours.beduinWay")}
                     </Link>
                     <Link
                       href="/desert-experiences/jebel-khash-route"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Jebel Khash Route
+                      {t("tours.jebelKhash")}
                     </Link>
                     <Link
                       href="/desert-experiences/jebel-khash-2"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Jebel Khash 2-Day
+                      {t("tours.jebelKhash2")}
                     </Link>
                     <Link
                       href="/desert-experiences/hot-air-balloon"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Hot Air Balloon
+                      {t("experiences.hotAirBalloon")}
                     </Link>
                     <Link
                       href="/desert-experiences/jebel-burdah-climbing"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Burdah Arch Scrambling
+                      {t("tours.burdah")}
                     </Link>
                     <Link
                       href="/desert-experiences/all-in-one-day"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      All in One Day
+                      {t("tours.allInOne")}
                     </Link>
                     <Link
                       href="/desert-experiences/um-addami-climbing"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Jebel Um Addami Climbing
+                      {t("tours.umAddami")}
                     </Link>
                     <Link
                       href="/desert-experiences/camel-rides"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Camel Rides
+                      {t("experiences.camelRides")}
                     </Link>
                     <Link
                       href="/desert-experiences/trekking"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Trekking in the Wild
+                      {t("tours.trekking")}
                     </Link>
                     <Link
                       href="/desert-experiences/night-walk-tour"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Night Walk Tour
+                      {t("tours.nightWalk")}
                     </Link>
                     <Link
                       href="/desert-experiences/stargazing-education"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Stargazing Education
+                      {t("tours.stargazing")}
                     </Link>
                   </div>
                 )}
@@ -585,7 +585,7 @@ export function SiteHeader() {
                   className="flex items-center justify-between w-full text-lg font-medium"
                   onClick={toggleMobilePackagesExpanded}
                 >
-                  <span>Packages</span>
+                  <span>{t("nav.packages")}</span>
                   {mobilePackagesExpanded ? (
                     <ChevronUp className="h-5 w-5 text-gray-500" />
                   ) : (
@@ -600,51 +600,51 @@ export function SiteHeader() {
                       className="text-gray-600 font-medium"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Bivouac Camping Package
+                      {t("packages.bivouac")}
                     </Link>
-                    <div className="font-medium text-gray-800 mt-3 mb-1">2-Day Packages</div>
+                    <div className="font-medium text-gray-800 mt-3 mb-1">{t("packages.2day")}</div>
                     <Link
                       href="/packages/classic-adventure"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Classic Adventure
+                      {t("packages.classic")}
                     </Link>
                     <Link
                       href="/packages/desert-explorer"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Desert Explorer
+                      {t("packages.explorer")}
                     </Link>
                     <Link
                       href="/packages/bedouin-experience"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Bedouin Experience
+                      {t("packages.bedouin")}
                     </Link>
-                    <div className="font-medium text-gray-800 mt-2 mb-1">3-Day Packages</div>
+                    <div className="font-medium text-gray-800 mt-2 mb-1">{t("packages.3day")}</div>
                     <Link
                       href="/packages/wadi-rum-discovery"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Wadi Rum Discovery
+                      {t("packages.discovery")}
                     </Link>
                     <Link
                       href="/packages/ultimate-adventure"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Ultimate Adventure
+                      {t("packages.ultimate")}
                     </Link>
                     <Link
                       href="/packages/jordan-heights"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Jordan Heights
+                      {t("packages.heights")}
                     </Link>
                   </div>
                 )}
@@ -655,7 +655,7 @@ export function SiteHeader() {
                   className="flex items-center justify-between w-full text-lg font-medium"
                   onClick={toggleMobileAccommodationExpanded}
                 >
-                  <span>Accommodation</span>
+                  <span>{t("nav.accommodation")}</span>
                   {mobileAccommodationExpanded ? (
                     <ChevronUp className="h-5 w-5 text-gray-500" />
                   ) : (
@@ -670,14 +670,14 @@ export function SiteHeader() {
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Our Tented Camp
+                      {t("accommodation.tentedCamp")}
                     </Link>
                     <Link
                       href="/accommodation/bivouac"
                       className="text-gray-600"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Bivouac Camping
+                      {t("accommodation.bivouac")}
                     </Link>
                   </div>
                 )}
@@ -688,7 +688,7 @@ export function SiteHeader() {
                 className="py-2 text-lg font-medium border-b border-gray-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Bubble Camp Partner
+                {t("nav.bubbleCampPartner")}
               </Link>
 
               <Link
@@ -698,7 +698,7 @@ export function SiteHeader() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Luxury Villas Partner
+                {t("nav.luxuryVillasPartner")}
               </Link>
 
               <Link
@@ -706,7 +706,7 @@ export function SiteHeader() {
                 className="py-2 text-lg font-medium border-b border-gray-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                About Us
+                {t("nav.aboutUs")}
               </Link>
 
               <Link
@@ -714,7 +714,7 @@ export function SiteHeader() {
                 className="py-2 text-lg font-medium border-b border-gray-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Contact us
+                {t("nav.contactUs")}
               </Link>
 
               <Link
@@ -722,7 +722,7 @@ export function SiteHeader() {
                 className="py-2 text-lg font-medium border-b border-gray-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Useful Information
+                {t("nav.usefulInfo")}
               </Link>
 
               <Link
@@ -730,20 +730,12 @@ export function SiteHeader() {
                 className="py-2 text-lg font-medium border-b border-gray-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                FAQ
-              </Link>
-
-              <Link
-                href="/blog"
-                className="py-2 text-lg font-medium border-b border-gray-100"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Blog
+                {t("nav.faq")}
               </Link>
 
               <div className="mt-4">
                 <Link href="/contact-us" onClick={() => setMobileMenuOpen(false)}>
-                  <Button className="w-full bg-amber-500 hover:bg-amber-600">Book Now</Button>
+                  <Button className="w-full bg-amber-500 hover:bg-amber-600">{t("nav.bookNow")}</Button>
                 </Link>
               </div>
             </nav>

@@ -7,6 +7,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { WhatsAppChat } from "@/components/whatsapp-chat"
 import { DiscountModal } from "@/components/discount-modal"
 import { generateLocalBusinessSchema } from "@/lib/schema"
+import { TranslationProvider } from "@/lib/translation-context"
 import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -74,11 +75,13 @@ export default function RootLayout({
         <meta property="og:image:alt" content="Mohammed Mutlak Camp - Traditional Bedouin Camp in Wadi Rum" />
       </head>
       <body className="min-h-screen bg-white font-sans antialiased">
-        <SiteHeader />
-        <main>{children}</main>
-        <SiteFooter />
-        <WhatsAppChat />
-        <DiscountModal />
+        <TranslationProvider>
+          <SiteHeader />
+          <main>{children}</main>
+          <SiteFooter />
+          <WhatsAppChat />
+          <DiscountModal />
+        </TranslationProvider>
       </body>
     </html>
   )

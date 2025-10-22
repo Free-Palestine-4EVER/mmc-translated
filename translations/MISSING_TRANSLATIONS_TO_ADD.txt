@@ -1,0 +1,256 @@
+================================================================================
+MISSING TRANSLATIONS - ORGANIZED FOR TRANSLATION WORK
+Mohammed Mutlak Camp Website
+================================================================================
+
+This file contains all the missing translation keys organized by language.
+Use this as a reference when adding the missing translations.
+
+================================================================================
+FRENCH (fr.json) - ADD THESE 62 KEYS
+================================================================================
+
+HOT AIR BALLOON SECTION - All keys start with "hotAirBalloon."
+
+Basic Information:
+------------------
+"hotAirBalloon.title": "Hot Air Balloon"
+"hotAirBalloon.subtitle": "SOAR ABOVE THE MAGNIFICENT DESERT LANDSCAPE FOR AN UNFORGETTABLE AERIAL PERSPECTIVE"
+"hotAirBalloon.imageAlt": "Hot Air Balloon over Wadi Rum"
+"hotAirBalloon.duration": "1-2 hours (flight time: 40-60 minutes)"
+"hotAirBalloon.guests": "From 1 to 8 guests per balloon"
+
+Descriptions:
+-------------
+"hotAirBalloon.description1": "Experience the breathtaking beauty of Wadi Rum from a completely different perspective with our Hot Air Balloon adventure. As you gently rise above the desert floor, the vast landscape unfolds beneath you, revealing the true scale and majesty of this UNESCO World Heritage site in a way that's impossible to appreciate from the ground."
+
+"hotAirBalloon.description2": "Our hot air balloon flights typically take place at sunrise, when the desert air is calm and the light is magical. As the sun crests the eastern mountains, it bathes the sandstone formations in a warm golden glow, creating a photographer's paradise and an unforgettable visual experience. From your elevated vantage point, you'll see the intricate patterns of canyons, the sweeping curves of sand dunes, and the dramatic rock formations that make Wadi Rum so unique."
+
+"hotAirBalloon.description3": "The balloon is piloted by experienced professionals with extensive knowledge of the local conditions, ensuring both safety and the best possible flight path to showcase the desert's highlights. The basket is spacious and comfortable, allowing you to relax and fully immerse yourself in the experience. The sensation of floating silently above the desert, with only the occasional burst from the burner breaking the tranquility, creates a peaceful and almost meditative atmosphere that contrasts beautifully with the rugged landscape below."
+
+Pricing:
+--------
+"hotAirBalloon.rates.perPerson": "Per Person"
+"hotAirBalloon.rates.perPerson.price": "200 JOD"
+"hotAirBalloon.rates.2to6": "2-6 Persons"
+"hotAirBalloon.rates.2to6.price": "185 JOD per person"
+"hotAirBalloon.rates.children": "Children 5-12 Years"
+"hotAirBalloon.rates.children.price": "100 JOD"
+"hotAirBalloon.rates.kids": "Kids under 5 Years"
+"hotAirBalloon.rates.kids.notRecommended": "Not recommended"
+
+Program Details:
+----------------
+"hotAirBalloon.programTitle": "Detailed Program"
+"hotAirBalloon.programSubtitle": "Everything you need to know"
+"hotAirBalloon.programIntro": "Your hot air balloon adventure begins very early in the morning, typically about 1-2 hours before sunrise. We'll pick you up from your accommodation in Wadi Rum Village or our camp and transport you to the launch site in the desert."
+
+"hotAirBalloon.preFlightBriefing.title": "Pre-flight Briefing:"
+"hotAirBalloon.preFlightBriefing.desc": "Upon arrival at the launch site, you'll meet your pilot and crew who will give you a comprehensive safety briefing. They'll explain what to expect during the flight, proper boarding and landing procedures, and answer any questions you might have."
+
+"hotAirBalloon.balloonInflation.title": "Balloon Inflation:"
+"hotAirBalloon.balloonInflation.desc": "You'll witness the fascinating process of inflating the balloon. As dawn approaches, the crew will begin setting up and inflating the massive balloon with cold air from powerful fans, before heating the air with the burners to bring the balloon upright. This spectacle is a photogenic part of the experience."
+
+"hotAirBalloon.boardingTakeoff.title": "Boarding and Take-off:"
+"hotAirBalloon.boardingTakeoff.desc": "Once the balloon is fully inflated and secured, you'll climb aboard the comfortable basket. As the sun begins to rise, the pilot will increase the heat in the balloon, and you'll gently lift off the ground, beginning your aerial adventure over Wadi Rum."
+
+"hotAirBalloon.theFlight.title": "The Flight:"
+"hotAirBalloon.theFlight.desc": "During your 40-60 minute flight, you'll drift peacefully over the desert landscape, taking in panoramic views of Wadi Rum's mountains, valleys, and dunes. The pilot will point out significant landmarks and share interesting information about the geology and history of the area. The flight path varies depending on wind conditions, ensuring each experience is unique."
+
+"hotAirBalloon.sunriseExperience.title": "Sunrise Experience:"
+"hotAirBalloon.sunriseExperience.desc": "One of the highlights of the flight is watching the sunrise over the desert. As the sun climbs above the horizon, it illuminates the landscape with a warm golden light, creating a magical atmosphere and spectacular photo opportunities."
+
+"hotAirBalloon.landing.title": "Landing:"
+"hotAirBalloon.landing.desc": "Your pilot will identify a suitable landing site based on wind conditions. The landing is typically gentle, though you'll be briefed on the proper landing position to ensure safety. The ground crew will follow the balloon in vehicles and will be waiting at the landing site to assist."
+
+"hotAirBalloon.postFlight.title": "Post-Flight Celebration:"
+"hotAirBalloon.postFlight.desc": "After landing, you'll participate in a traditional hot air balloon ceremony, often including a light breakfast or refreshments and a flight certificate to commemorate your adventure. This is a perfect time to share your experiences with fellow passengers and take final photos."
+
+"hotAirBalloon.returnTransfer.title": "Return Transfer:"
+"hotAirBalloon.returnTransfer.desc": "Following the celebration, you'll be transported back to your accommodation in Wadi Rum Village or our camp, typically arriving by mid-morning, leaving you with the rest of the day free for other activities."
+
+"hotAirBalloon.weatherNote": "Please note that hot air balloon flights are weather-dependent for safety reasons. In case of unsuitable weather conditions (strong winds, rain, or poor visibility), flights may be rescheduled or refunded. We always prioritize safety above all else."
+
+Included/Not Included:
+----------------------
+"hotAirBalloon.included.transportation": "Round-trip transportation from your accommodation in Wadi Rum Village or our camp"
+"hotAirBalloon.included.pilot": "Professional, licensed balloon pilot"
+"hotAirBalloon.included.safetyBriefing": "Comprehensive safety briefing"
+"hotAirBalloon.included.flight": "40-60 minute hot air balloon flight"
+"hotAirBalloon.included.refreshments": "Light refreshments after the flight"
+"hotAirBalloon.included.certificate": "Flight certificate"
+"hotAirBalloon.included.insurance": "Basic insurance coverage"
+
+"hotAirBalloon.notIncluded.photography": "Professional photography services (available for an additional fee)"
+"hotAirBalloon.notIncluded.transportationToWadiRum": "Transportation to/from Wadi Rum (can be arranged for an additional fee)"
+"hotAirBalloon.notIncluded.comprehensiveInsurance": "Comprehensive travel insurance"
+
+"hotAirBalloon.faqDescription": "Common questions about our Hot Air Balloon experience and visiting Wadi Rum"
+
+Related Tours:
+--------------
+"hotAirBalloon.relatedTours.fullDayJeep.title": "Full Day Jeep Tour"
+"hotAirBalloon.relatedTours.fullDayJeep.subtitle": "Comprehensive Desert Exploration"
+"hotAirBalloon.relatedTours.fullDayJeep.desc": "A comprehensive 7-hour jeep tour exploring the vast beauty of Wadi Rum, including hidden canyons and ancient inscriptions."
+"hotAirBalloon.relatedTours.fullDayJeep.duration": "7 hours"
+"hotAirBalloon.relatedTours.fullDayJeep.price": "65 JOD"
+
+"hotAirBalloon.relatedTours.allInOne.title": "All in One Day"
+"hotAirBalloon.relatedTours.allInOne.subtitle": "Multiple Activities in One Day"
+"hotAirBalloon.relatedTours.allInOne.desc": "Experience multiple activities in a single day, including jeep tour, camel ride, and short hike for a comprehensive desert experience."
+"hotAirBalloon.relatedTours.allInOne.duration": "Full day"
+"hotAirBalloon.relatedTours.allInOne.price": "90 JOD"
+
+"hotAirBalloon.relatedTours.tentedCamp.title": "Our Tented Camp"
+"hotAirBalloon.relatedTours.tentedCamp.subtitle": "Comfortable Desert Accommodation"
+"hotAirBalloon.relatedTours.tentedCamp.desc": "Stay in our comfortable tented camp with modern amenities, traditional Bedouin hospitality, and stunning desert views."
+"hotAirBalloon.relatedTours.tentedCamp.duration": "Overnight"
+"hotAirBalloon.relatedTours.tentedCamp.price": "50 JOD"
+
+
+================================================================================
+GERMAN (de.json) - ADD THESE SAME 62 KEYS
+================================================================================
+
+Same keys as French above - translate the English values to German.
+
+
+================================================================================
+ITALIAN (it.json) - ADD THESE SAME 62 KEYS
+================================================================================
+
+Same keys as French above - translate the English values to Italian.
+
+
+================================================================================
+ARABIC (ar.json) - ADD THESE 56 KEYS
+================================================================================
+
+JEBEL BURDAH ARCH SCRAMBLING SECTION - All keys start with "jebelBurdah."
+
+Basic Information:
+------------------
+"jebelBurdah.title": "Burdah Arch Scrambling"
+"jebelBurdah.subtitle": "CHALLENGE YOURSELF WITH A GUIDED CLIMB TO ONE OF WADI RUM'S MOST IMPRESSIVE NATURAL FORMATIONS"
+"jebelBurdah.heroAlt": "Burdah Arch Scrambling in Wadi Rum"
+"jebelBurdah.galleryAlt": "Burdah Arch Scrambling"
+"jebelBurdah.duration": "Full day (6-7 hours)"
+"jebelBurdah.guests": "From 1 to 6 guests"
+"jebelBurdah.experienceTitle": "Burdah Arch Scrambling"
+
+Descriptions:
+-------------
+"jebelBurdah.description1": "The Burdah Rock Bridge (Arch) is one of Wadi Rum's most iconic and impressive natural formations. Standing approximately 35 meters high, it is one of the highest natural arches in the world and offers an exhilarating climbing adventure for those seeking a physical challenge and breathtaking views."
+
+"jebelBurdah.description2": "This full-day experience combines a jeep tour through the stunning desert landscape with an exciting scrambling climb to the top of the arch. The climb itself is not technical mountaineering but rather a moderate to challenging scramble that requires a reasonable level of fitness, some agility, and a head for heights. Our experienced Bedouin guides, who know every handhold and foothold on the route, will ensure your safety throughout the adventure."
+
+"jebelBurdah.description3": "Reaching the top of the arch is a truly rewarding experience. Standing on this natural wonder, with panoramic views of the vast desert stretching in all directions, creates a profound sense of achievement and connection with the ancient landscape. The unique perspective from the arch offers unparalleled photo opportunities and memories that will last a lifetime."
+
+Pricing:
+--------
+"jebelBurdah.rates.1person": "1 Person"
+"jebelBurdah.rates.1person.price": "80 JOD"
+"jebelBurdah.rates.2to3": "2-3 Persons"
+"jebelBurdah.rates.2to3.price": "70 JOD per person"
+"jebelBurdah.rates.4to6": "4-6 Persons"
+"jebelBurdah.rates.4to6.price": "60 JOD per person"
+"jebelBurdah.rates.children12to16": "Children 12-16 Years"
+"jebelBurdah.rates.children12to16.price": "Same as adults (with parental supervision)"
+"jebelBurdah.rates.childrenUnder12": "Children under 12"
+"jebelBurdah.rates.childrenUnder12.price": "Not recommended"
+
+Program Details:
+----------------
+"jebelBurdah.programIntro": "Your Burdah Arch adventure begins in the morning at Wadi Rum Village, where you'll meet your experienced Bedouin guide and board your 4x4 jeep. After a brief introduction and safety information, you'll set off into the desert, heading toward the impressive Burdah mountain range."
+
+"jebelBurdah.jeepJourney.title": "Jeep Journey to Burdah:"
+"jebelBurdah.jeepJourney.desc": "The drive to the base of Burdah takes approximately 45 minutes to 1 hour, depending on the route. Along the way, you'll pass through beautiful desert landscapes and may stop at other interesting sites such as ancient inscriptions or unique rock formations. Your guide will provide information about the geology, history, and Bedouin culture of the area."
+
+"jebelBurdah.safetyBriefing.title": "Safety Briefing and Preparation:"
+"jebelBurdah.safetyBriefing.desc": "Upon arrival at the base of Burdah, your guide will provide a comprehensive safety briefing and explain the climbing route. You'll have time to prepare your gear, have some water, and ask any questions before beginning the ascent. The guide will assess the group's fitness and experience level to tailor the pace accordingly."
+
+"jebelBurdah.climb.title": "The Climb:"
+"jebelBurdah.climb.desc1": "The climb to Burdah Arch is a scramble rather than a technical climb, meaning it involves using your hands and feet but doesn't require specialized climbing equipment. The route follows natural features in the rock, with some steeper sections and narrow ledges. Your guide will lead the way, pointing out the best handholds and footholds, and offering assistance when needed."
+
+"jebelBurdah.climb.desc2": "The ascent typically takes 1.5-2 hours, depending on the group's pace and fitness level. There are several rest points along the way where you can catch your breath and enjoy the increasingly impressive views. The final approach to the arch involves a traverse along a narrow ledge followed by a short scramble to reach the top of the arch itself."
+
+"jebelBurdah.summit.title": "At the Summit:"
+"jebelBurdah.summit.desc": "Standing on top of Burdah Arch is a truly memorable experience. The arch is approximately 35 meters high and offers 360-degree panoramic views of the surrounding desert landscape. You'll have time to rest, take photos, and simply absorb the magnificent scenery. Your guide will point out landmarks and share stories about the area."
+
+"jebelBurdah.descent.title": "Descent:"
+"jebelBurdah.descent.desc": "After enjoying the summit, you'll begin the descent, which follows the same route as the ascent. Going down can sometimes be more challenging than going up, but your guide will provide close assistance on the steeper sections. The descent typically takes 1-1.5 hours."
+
+"jebelBurdah.lunchBreak.title": "Lunch Break:"
+"jebelBurdah.lunchBreak.desc": "Upon returning to the base of Burdah, you'll enjoy a well-deserved lunch in the shade. Your guide will prepare a traditional Bedouin meal, typically including fresh bread, hummus, salads, and tea. This is a perfect time to relax, reflect on your achievement, and ask your guide any questions about Bedouin life or the surrounding area."
+
+"jebelBurdah.returnJourney.title": "Return Journey:"
+"jebelBurdah.returnJourney.desc": "After lunch, you'll board the jeep for the return journey to Wadi Rum Village. The route back may include stops at other interesting sites in the desert, depending on time and your preferences. You'll arrive back at the village in the late afternoon, typically between 3:00 and 4:00 PM."
+
+"jebelBurdah.conclusion": "Throughout the day, your guide will ensure your safety and comfort, sharing their deep knowledge of the desert and Bedouin culture. The Burdah Arch scramble is a challenging but immensely rewarding experience that combines physical adventure with cultural insights and natural beauty."
+
+Included Items:
+---------------
+"jebelBurdah.included.climbingGuide": "Experienced climbing guide"
+"jebelBurdah.included.specializedEquipmentNote": "Specialized climbing equipment (not typically needed but can be arranged if requested)"
+
+FAQ:
+----
+"jebelBurdah.faqDescription": "Common questions about our Burdah Arch Scrambling and visiting Wadi Rum"
+
+Related Tours:
+--------------
+"jebelBurdah.relatedTours.umAddami.title": "Jebel Um Addami Climbing"
+"jebelBurdah.relatedTours.umAddami.subtitle": "Jordan's Highest Mountain"
+"jebelBurdah.relatedTours.umAddami.desc": "Reach the summit of Jebel Um Addami, Jordan's highest peak, for amazing views on an unforgettable guided adventure."
+"jebelBurdah.relatedTours.umAddami.duration": "1 Day / 7 hours"
+"jebelBurdah.relatedTours.umAddami.price": "65 JOD"
+
+"jebelBurdah.relatedTours.allInOne.title": "All in One Day"
+"jebelBurdah.relatedTours.allInOne.subtitle": "Multiple Activities in One Day"
+"jebelBurdah.relatedTours.allInOne.desc": "Experience multiple activities in a single day, including jeep tour, camel ride, and short hike for a comprehensive desert experience."
+"jebelBurdah.relatedTours.allInOne.duration": "Full day"
+"jebelBurdah.relatedTours.allInOne.price": "90 JOD"
+
+"jebelBurdah.relatedTours.camelRide.title": "Camel Ride"
+"jebelBurdah.relatedTours.camelRide.subtitle": "Sunset or Sunrise Camel Ride"
+"jebelBurdah.relatedTours.camelRide.desc": "Witness the desert's beauty at sunrise or sunset on a peaceful camel ride, guided by our experts for an unforgettable experience."
+"jebelBurdah.relatedTours.camelRide.duration": "2-3 hours ride"
+"jebelBurdah.relatedTours.camelRide.price": "20 JOD"
+
+"jebelBurdah.relatedTours.bookNow": "Book Now"
+
+
+================================================================================
+NOTES FOR TRANSLATORS
+================================================================================
+
+1. PRESERVE FORMATTING:
+   - Keep all JSON formatting intact
+   - Maintain quotation marks and commas
+   - Don't translate: "JOD", technical terms, proper names (Wadi Rum, Bedouin, etc.)
+
+2. CONSISTENCY:
+   - Use the Spanish (es.json) file as a reference for quality
+   - Maintain consistent terminology across your translations
+   - Keep the same level of formality/informality as other translations
+
+3. SPECIAL CHARACTERS:
+   - French: Ensure proper accents (é, è, à, ç, etc.)
+   - German: Use proper umlauts (ä, ö, ü) and ß
+   - Italian: Use proper accents (à, è, é, ì, ò, ù)
+   - Arabic: Ensure proper RTL (right-to-left) text encoding
+
+4. CULTURAL NOTES:
+   - "Bedouin" may have specific translations in your language
+   - Keep "Wadi Rum" as is (it's a proper name)
+   - "Jebel" means "mountain" in Arabic - keep it as "Jebel Burdah"
+   - "JOD" is Jordanian Dinar currency code - don't translate
+
+5. TESTING:
+   - After adding translations, test on the actual website
+   - Verify the page displays correctly in your language
+   - Check that all text fits properly in the UI
+
+================================================================================
+END OF FILE
+================================================================================

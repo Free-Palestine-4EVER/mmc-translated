@@ -1,9 +1,15 @@
+"use client"
+
+import { useTranslation } from "@/lib/translation-context"
+
 export function AnnouncementBar() {
+  const { t } = useTranslation()
+
   const announcements = [
-    "Our camp has Wi-Fi connection",
-    "We offer discount for groups",
-    "We can arrange taxi for you from any city in Jordan with best prices",
-    "Hot air Balloon now available with us",
+    t("announcement.wifi"),
+    t("announcement.groupDiscount"),
+    t("announcement.taxi"),
+    t("announcement.hotAirBalloon"),
   ]
 
   // Join announcements with a black bullet point and more spacing

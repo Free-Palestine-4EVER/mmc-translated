@@ -1,14 +1,19 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Instagram } from "lucide-react"
+import { useTranslation } from "@/lib/translation-context"
 
 export function SiteFooter() {
+  const { t } = useTranslation()
+
   return (
     <footer className="bg-slate-900 text-white">
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
           <div className="space-y-6">
-            <h3 className="text-4xl font-bold">Travel beyond your imagination, with Mohammed Mutlak Camp</h3>
+            <h3 className="text-4xl font-bold">{t("footer.mainTagline")}</h3>
             <div className="border-t border-white/30 pt-6">
               {/* Make the logo white using CSS filter */}
               <Image
@@ -21,46 +26,46 @@ export function SiteFooter() {
             </div>
           </div>
           <div className="space-y-4">
-            <h3 className="text-lg font-bold">Quick Links</h3>
+            <h3 className="text-lg font-bold">{t("footer.quickLinks")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="hover:text-amber-400 transition-colors">
-                  Home Page
+                  {t("footer.homePage")}
                 </Link>
               </li>
               <li>
                 <Link href="/about-us" className="hover:text-amber-400 transition-colors">
-                  About Us
+                  {t("footer.aboutUs")}
                 </Link>
               </li>
               <li>
                 <Link href="/accommodation" className="hover:text-amber-400 transition-colors">
-                  Accommodations
+                  {t("footer.accommodations")}
                 </Link>
               </li>
               <li>
                 <Link href="/desert-experiences" className="hover:text-amber-400 transition-colors">
-                  Desert Experiences
+                  {t("footer.desertExperiences")}
                 </Link>
               </li>
               <li>
                 <Link href="/contact-us" className="hover:text-amber-400 transition-colors">
-                  Contact Us
+                  {t("footer.contactUs")}
                 </Link>
               </li>
             </ul>
           </div>
           <div className="space-y-4">
-            <h3 className="text-lg font-bold">Top destinations</h3>
+            <h3 className="text-lg font-bold">{t("footer.topDestinations")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/desert-experiences/full-day-jeep-tour" className="hover:text-amber-400 transition-colors">
-                  Full day jeep
+                  {t("footer.fullDayJeep")}
                 </Link>
               </li>
               <li>
                 <Link href="/desert-experiences/half-day-jeep-tour" className="hover:text-amber-400 transition-colors">
-                  Half day jeep
+                  {t("footer.halfDayJeep")}
                 </Link>
               </li>
               <li>
@@ -68,38 +73,38 @@ export function SiteFooter() {
                   href="/desert-experiences/jebel-burdah-climbing"
                   className="hover:text-amber-400 transition-colors"
                 >
-                  Jebel Burdah Climbing
+                  {t("footer.jebelBurdahClimbing")}
                 </Link>
               </li>
               <li>
                 <Link href="/desert-experiences/um-addami-climbing" className="hover:text-amber-400 transition-colors">
-                  Jebel Um Addami
+                  {t("footer.jebelUmAddami")}
                 </Link>
               </li>
               <li>
                 <Link href="/desert-experiences/all-in-one-day" className="hover:text-amber-400 transition-colors">
-                  All in one Day
+                  {t("footer.allInOneDay")}
                 </Link>
               </li>
               <li>
                 <Link href="/desert-experiences/the-beduin-way" className="hover:text-amber-400 transition-colors">
-                  The Beduin Way
+                  {t("footer.theBeduinWay")}
                 </Link>
               </li>
               <li>
                 <Link href="/desert-experiences/jebel-khash-route" className="hover:text-amber-400 transition-colors">
-                  Jebel Khash Route
+                  {t("footer.jebelKhashRoute")}
                 </Link>
               </li>
               <li>
                 <Link href="/desert-experiences/trekking" className="hover:text-amber-400 transition-colors">
-                  Trekking in the Wild
+                  {t("footer.trekkingInTheWild")}
                 </Link>
               </li>
             </ul>
           </div>
           <div className="space-y-4">
-            <h3 className="text-lg font-bold">Contact Us</h3>
+            <h3 className="text-lg font-bold">{t("footer.contactUs")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="mailto:mohammed.mutlak.camp@gmail.com" className="hover:text-amber-400 transition-colors">

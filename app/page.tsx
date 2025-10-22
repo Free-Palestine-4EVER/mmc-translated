@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
@@ -5,42 +7,30 @@ import { Button } from "@/components/ui/button"
 import { FAQSection } from "@/components/faq-section"
 import { AnimateOnScroll } from "@/components/animate-on-scroll"
 import { generateTouristAttractionSchema } from "@/lib/schema"
-import type { Metadata } from "next"
-
-export const metadata: Metadata = {
-  title: "Wadi Rum Tours | Best Desert Adventures in Jordan's Valley of the Moon",
-  description:
-    "Discover authentic Bedouin experiences in Wadi Rum with our guided jeep tours, camel rides, desert camping, and hiking adventures. Book your unforgettable journey in Jordan's UNESCO World Heritage site.",
-  keywords:
-    "Wadi Rum tours, Wadi Rum desert, Jordan desert tours, Bedouin experience, Wadi Rum camping, jeep safari Jordan, camel trek Wadi Rum, Valley of the Moon, Jordan travel",
-}
+import { useTranslation } from "@/lib/translation-context"
 
 export default function Home() {
+  const { t } = useTranslation()
   const homepageFaqs = [
     {
-      question: "What is the best time to visit Wadi Rum?",
-      answer:
-        "The best times to visit Wadi Rum are during spring (March to May) and autumn (September to November) when temperatures are moderate. Summer (June to August) can be very hot during the day, though nights are pleasant. Winter (December to February) offers mild days but cold nights.",
+      question: t("faq.question1"),
+      answer: t("faq.answer1"),
     },
     {
-      question: "How physically demanding are the tours?",
-      answer:
-        "Our tours vary in physical intensity. Jeep tours and camel rides are accessible to most people, while climbing and trekking experiences require a moderate level of fitness. We can customize tours based on your physical abilities and preferences.",
+      question: t("faq.question2"),
+      answer: t("faq.answer2"),
     },
     {
-      question: "What types of accommodation do you offer?",
-      answer:
-        "We offer traditional Bedouin tented camps with modern amenities, as well as bivouac camping under the stars. Through our partners, we also offer luxury bubble tents with transparent ceilings for stargazing.",
+      question: t("faq.question3"),
+      answer: t("faq.answer3"),
     },
     {
-      question: "Can I customize a tour?",
-      answer:
-        "Yes, we can customize tours to suit your interests, time constraints, and physical abilities. Please contact us to discuss your specific requirements.",
+      question: t("faq.question4"),
+      answer: t("faq.answer4"),
     },
     {
-      question: "How far in advance should I book?",
-      answer:
-        "We recommend booking at least a few days in advance, especially during peak season (March-May and September-November). For holiday periods and special requests, booking several weeks ahead is advisable.",
+      question: t("faq.question5"),
+      answer: t("faq.answer5"),
     },
   ]
 
@@ -69,11 +59,10 @@ export default function Home() {
         </div>
         <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center">
           <h1 className="mb-4 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">
-            Experience the Magic of Wadi Rum
+            {t("hero.title")}
           </h1>
           <p className="mb-8 max-w-3xl text-xl">
-            Discover the breathtaking beauty of Jordan's desert with our authentic Bedouin experiences, guided tours,
-            and comfortable accommodations.
+            {t("hero.description")}
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
             <Link href="/desert-experiences">
@@ -81,7 +70,7 @@ export default function Home() {
                 size="lg"
                 className="bg-amber-500 hover:bg-amber-600 text-white font-bold transition-colors duration-300"
               >
-                Explore Tours
+                {t("common.exploreTours")}
               </Button>
             </Link>
             <Link href="/contact-us">
@@ -89,7 +78,7 @@ export default function Home() {
                 size="lg"
                 className="bg-white text-amber-600 hover:bg-gray-100 font-bold transition-colors duration-300"
               >
-                Book Now
+                {t("nav.bookNow")}
               </Button>
             </Link>
           </div>
@@ -105,8 +94,8 @@ export default function Home() {
               <div className="flex flex-col md:hidden">
                 {/* 1. Title */}
                 <div className="mb-6">
-                  <h2 className="text-2xl font-bold text-blue-500">Dream Vacation Destination</h2>
-                  <h1 className="text-4xl font-bold tracking-tight mt-2">Plan the Trip of a Lifetime with Ease</h1>
+                  <h2 className="text-2xl font-bold text-blue-500">{t("dreamVacation.subtitle")}</h2>
+                  <h1 className="text-4xl font-bold tracking-tight mt-2">{t("dreamVacation.title")}</h1>
                 </div>
 
                 {/* 2. Image */}
@@ -124,9 +113,7 @@ export default function Home() {
                 {/* 3. Text */}
                 <div className="mb-6">
                   <p className="text-lg text-gray-700">
-                    Whether you're looking for a romantic getaway, a family-friendly adventure, or a solo journey to
-                    explore the world, a travel agency can provide you with a custom-tailored itinerary that exceeds
-                    your expectations.
+                    {t("dreamVacation.description")}
                   </p>
                 </div>
 
@@ -137,7 +124,7 @@ export default function Home() {
                       size="lg"
                       className="bg-amber-400 hover:bg-amber-500 text-black font-bold transition-colors duration-300"
                     >
-                      Book Now
+                      {t("nav.bookNow")}
                     </Button>
                   </Link>
                 </div>
@@ -145,14 +132,12 @@ export default function Home() {
 
               {/* Desktop layout - side by side */}
               <div className="hidden md:block space-y-6">
-                <h2 className="text-2xl font-bold text-blue-500">Dream Vacation Destination</h2>
+                <h2 className="text-2xl font-bold text-blue-500">{t("dreamVacation.subtitle")}</h2>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                  Plan the Trip of a Lifetime with Ease
+                  {t("dreamVacation.title")}
                 </h1>
                 <p className="text-lg text-gray-700">
-                  Whether you're looking for a romantic getaway, a family-friendly adventure, or a solo journey to
-                  explore the world, a travel agency can provide you with a custom-tailored itinerary that exceeds your
-                  expectations.
+                  {t("dreamVacation.description")}
                 </p>
                 <div>
                   <Link href="/contact-us">
@@ -160,7 +145,7 @@ export default function Home() {
                       size="lg"
                       className="bg-amber-400 hover:bg-amber-500 text-black font-bold transition-colors duration-300"
                     >
-                      Book Now
+                      {t("nav.bookNow")}
                     </Button>
                   </Link>
                 </div>
@@ -185,7 +170,7 @@ export default function Home() {
         <section className="bg-gradient-to-b from-amber-50 to-amber-100 py-16">
           <div className="container">
             <div className="mb-12 text-center">
-              <h2 className="text-3xl font-bold">Plan the Trip of a Lifetime with Ease</h2>
+              <h2 className="text-3xl font-bold">{t("experiences.title")}</h2>
 
               {/* Mobile only - add an image right after the title */}
               <div className="mt-6 mb-6 md:hidden">
@@ -199,8 +184,7 @@ export default function Home() {
               </div>
 
               <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-                We offer a variety of desert experiences, including jeep tours, camel rides, hiking, camping, and more.
-                Our expert guides will ensure you have an unforgettable adventure in the heart of Wadi Rum.
+                {t("experiences.description")}
               </p>
             </div>
 
@@ -209,19 +193,19 @@ export default function Home() {
                 <div className="h-48 relative">
                   <Image src="/images/jeep-tours-new.webp" alt="Jeep Tours" fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                    <h3 className="text-xl font-bold text-white p-4">Jeep Tours</h3>
+                    <h3 className="text-xl font-bold text-white p-4">{t("experiences.jeepTours")}</h3>
                   </div>
                 </div>
                 <div className="p-4">
                   <p className="text-gray-700 mb-4">
-                    Explore the vast desert landscapes in our 4x4 jeeps with experienced Bedouin guides.
+                    {t("experiences.jeepTours.desc")}
                   </p>
                   <Link href="/desert-experiences/half-day-jeep-tour">
                     <Button
                       variant="outline"
                       className="w-full border-amber-500 text-amber-600 hover:bg-amber-50 transition-colors duration-300"
                     >
-                      Learn More
+                      {t("common.learnMore")}
                     </Button>
                   </Link>
                 </div>
@@ -231,19 +215,19 @@ export default function Home() {
                 <div className="h-48 relative">
                   <Image src="/images/hot-air-balloon.jpg" alt="Hot Air Balloon" fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                    <h3 className="text-xl font-bold text-white p-4">Hot Air Balloon</h3>
+                    <h3 className="text-xl font-bold text-white p-4">{t("experiences.hotAirBalloon")}</h3>
                   </div>
                 </div>
                 <div className="p-4">
                   <p className="text-gray-700 mb-4">
-                    Soar above the magnificent desert landscape for an unforgettable aerial perspective.
+                    {t("experiences.hotAirBalloon.desc")}
                   </p>
                   <Link href="/desert-experiences/hot-air-balloon">
                     <Button
                       variant="outline"
                       className="w-full border-amber-500 text-amber-600 hover:bg-amber-50 transition-colors duration-300"
                     >
-                      Learn More
+                      {t("common.learnMore")}
                     </Button>
                   </Link>
                 </div>
@@ -253,19 +237,19 @@ export default function Home() {
                 <div className="h-48 relative">
                   <Image src="/images/hiking-trekking-new.jpeg" alt="Hiking & Trekking" fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                    <h3 className="text-xl font-bold text-white p-4">Hiking & Trekking</h3>
+                    <h3 className="text-xl font-bold text-white p-4">{t("experiences.hiking")}</h3>
                   </div>
                 </div>
                 <div className="p-4">
                   <p className="text-gray-700 mb-4">
-                    Explore Wadi Rum on foot with our guided trekking adventures through the desert terrain.
+                    {t("experiences.hiking.desc")}
                   </p>
                   <Link href="/desert-experiences/trekking">
                     <Button
                       variant="outline"
                       className="w-full border-amber-500 text-amber-600 hover:bg-amber-50 transition-colors duration-300"
                     >
-                      Learn More
+                      {t("common.learnMore")}
                     </Button>
                   </Link>
                 </div>
@@ -275,19 +259,19 @@ export default function Home() {
                 <div className="h-48 relative">
                   <Image src="/images/camel-ride.jpg" alt="Camel Rides" fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                    <h3 className="text-xl font-bold text-white p-4">Camel Rides</h3>
+                    <h3 className="text-xl font-bold text-white p-4">{t("experiences.camelRides")}</h3>
                   </div>
                 </div>
                 <div className="p-4">
                   <p className="text-gray-700 mb-4">
-                    Experience the traditional Bedouin way of desert travel on our guided camel tours.
+                    {t("experiences.camelRides.desc")}
                   </p>
                   <Link href="/desert-experiences/camel-rides">
                     <Button
                       variant="outline"
                       className="w-full border-amber-500 text-amber-600 hover:bg-amber-50 transition-colors duration-300"
                     >
-                      Learn More
+                      {t("common.learnMore")}
                     </Button>
                   </Link>
                 </div>
@@ -299,19 +283,19 @@ export default function Home() {
                 <div className="h-48 relative">
                   <Image src="/images/burdah-arch.jpg" alt="Rock Climbing" fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                    <h3 className="text-xl font-bold text-white p-4">Rock Climbing</h3>
+                    <h3 className="text-xl font-bold text-white p-4">{t("experiences.rockClimbing")}</h3>
                   </div>
                 </div>
                 <div className="p-4">
                   <p className="text-gray-700 mb-4">
-                    Challenge yourself with guided climbs to iconic rock formations like Burdah Arch.
+                    {t("experiences.rockClimbing.desc")}
                   </p>
                   <Link href="/desert-experiences/jebel-burdah-climbing">
                     <Button
                       variant="outline"
                       className="w-full border-amber-500 text-amber-600 hover:bg-amber-50 transition-colors duration-300"
                     >
-                      Learn More
+                      {t("common.learnMore")}
                     </Button>
                   </Link>
                 </div>
@@ -321,19 +305,19 @@ export default function Home() {
                 <div className="h-48 relative">
                   <Image src="/images/jebel-um-addami.jpg" alt="Mountain Climbing" fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                    <h3 className="text-xl font-bold text-white p-4">Mountain Climbing</h3>
+                    <h3 className="text-xl font-bold text-white p-4">{t("experiences.mountainClimbing")}</h3>
                   </div>
                 </div>
                 <div className="p-4">
                   <p className="text-gray-700 mb-4">
-                    Reach the summit of Jordan's highest peak, Jebel Um Addami, for breathtaking views.
+                    {t("experiences.mountainClimbing.desc")}
                   </p>
                   <Link href="/desert-experiences/um-addami-climbing">
                     <Button
                       variant="outline"
                       className="w-full border-amber-500 text-amber-600 hover:bg-amber-50 transition-colors duration-300"
                     >
-                      Learn More
+                      {t("common.learnMore")}
                     </Button>
                   </Link>
                 </div>
@@ -343,19 +327,19 @@ export default function Home() {
                 <div className="h-48 relative">
                   <Image src="/images/beduin-way.jpg" alt="Bedouin Experience" fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                    <h3 className="text-xl font-bold text-white p-4">Bedouin Experience</h3>
+                    <h3 className="text-xl font-bold text-white p-4">{t("experiences.bedouinExperience")}</h3>
                   </div>
                 </div>
                 <div className="p-4">
                   <p className="text-gray-700 mb-4">
-                    Immerse yourself in authentic Bedouin culture with our traditional desert experiences.
+                    {t("experiences.bedouinExperience.desc")}
                   </p>
                   <Link href="/desert-experiences/the-beduin-way">
                     <Button
                       variant="outline"
                       className="w-full border-amber-500 text-amber-600 hover:bg-amber-50 transition-colors duration-300"
                     >
-                      Learn More
+                      {t("common.learnMore")}
                     </Button>
                   </Link>
                 </div>
@@ -365,19 +349,19 @@ export default function Home() {
                 <div className="h-48 relative">
                   <Image src="/images/tented-camp.jpg" alt="Desert Camping" fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                    <h3 className="text-xl font-bold text-white p-4">Desert Camping</h3>
+                    <h3 className="text-xl font-bold text-white p-4">{t("experiences.desertCamping")}</h3>
                   </div>
                 </div>
                 <div className="p-4">
                   <p className="text-gray-700 mb-4">
-                    Stay in our comfortable tented camp or experience sleeping under the stars.
+                    {t("experiences.desertCamping.desc")}
                   </p>
                   <Link href="/accommodation">
                     <Button
                       variant="outline"
                       className="w-full border-amber-500 text-amber-600 hover:bg-amber-50 transition-colors duration-300"
                     >
-                      Learn More
+                      {t("common.learnMore")}
                     </Button>
                   </Link>
                 </div>
@@ -387,7 +371,7 @@ export default function Home() {
             <div className="mt-12 text-center">
               <Link href="/desert-experiences">
                 <Button size="lg" className="bg-amber-500 hover:bg-amber-600 transition-colors duration-300">
-                  View All Experiences
+                  {t("common.viewAllExperiences")}
                 </Button>
               </Link>
             </div>
@@ -403,7 +387,7 @@ export default function Home() {
             <div className="md:hidden flex flex-col">
               {/* 1. Title */}
               <div className="mb-6 text-center">
-                <h2 className="text-3xl font-bold">Embrace the Thrill of the Unknown</h2>
+                <h2 className="text-3xl font-bold">{t("thrill.title")}</h2>
               </div>
 
               {/* 2. Image */}
@@ -422,27 +406,26 @@ export default function Home() {
               {/* 3. Text */}
               <div className="mb-6">
                 <p className="text-lg">
-                  Our expert guides will take you on an unforgettable journey through the ancient landscapes of Wadi
-                  Rum. Discover hidden canyons, towering sandstone mountains, and breathtaking vistas.
+                  {t("thrill.description")}
                 </p>
                 <ul className="space-y-2 mt-4">
                   <li className="flex items-center">
                     <svg className="h-5 w-5 mr-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Experienced local Bedouin guides
+                    {t("thrill.feature1")}
                   </li>
                   <li className="flex items-center">
                     <svg className="h-5 w-5 mr-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Customized tours for all experience levels
+                    {t("thrill.feature2")}
                   </li>
                   <li className="flex items-center">
                     <svg className="h-5 w-5 mr-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Authentic Bedouin hospitality
+                    {t("thrill.feature3")}
                   </li>
                 </ul>
               </div>
@@ -451,7 +434,7 @@ export default function Home() {
               <div className="text-center">
                 <Link href="/desert-experiences">
                   <Button className="bg-white text-amber-600 hover:bg-gray-100 transition-colors duration-300">
-                    Explore Tours
+                    {t("common.exploreTours")}
                   </Button>
                 </Link>
               </div>
@@ -460,34 +443,33 @@ export default function Home() {
             {/* Desktop layout - side by side */}
             <div className="hidden md:grid md:grid-cols-2 md:gap-8 md:items-center">
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold">Embrace the Thrill of the Unknown</h2>
+                <h2 className="text-3xl font-bold">{t("thrill.title")}</h2>
                 <p className="text-lg">
-                  Our expert guides will take you on an unforgettable journey through the ancient landscapes of Wadi
-                  Rum. Discover hidden canyons, towering sandstone mountains, and breathtaking vistas.
+                  {t("thrill.description")}
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <svg className="h-5 w-5 mr-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Experienced local Bedouin guides
+                    {t("thrill.feature1")}
                   </li>
                   <li className="flex items-center">
                     <svg className="h-5 w-5 mr-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Customized tours for all experience levels
+                    {t("thrill.feature2")}
                   </li>
                   <li className="flex items-center">
                     <svg className="h-5 w-5 mr-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Authentic Bedouin hospitality
+                    {t("thrill.feature3")}
                   </li>
                 </ul>
                 <Link href="/desert-experiences">
                   <Button className="bg-white text-amber-600 hover:bg-gray-100 transition-colors duration-300">
-                    Explore Tours
+                    {t("common.exploreTours")}
                   </Button>
                 </Link>
               </div>
@@ -513,7 +495,7 @@ export default function Home() {
             <div className="md:hidden flex flex-col">
               {/* 1. Title */}
               <div className="mb-6 text-center">
-                <h2 className="text-3xl font-bold">Discover Your Next Adventure</h2>
+                <h2 className="text-3xl font-bold">{t("adventure.title")}</h2>
               </div>
 
               {/* 2. Image */}
@@ -530,9 +512,7 @@ export default function Home() {
               {/* 3. Text */}
               <div className="mb-6">
                 <p className="text-lg text-gray-700">
-                  Whether you're looking for a short excursion or a multi-day expedition, we have the perfect adventure
-                  waiting for you. Our tours are designed to showcase the best of Wadi Rum's natural beauty and cultural
-                  heritage.
+                  {t("adventure.description")}
                 </p>
               </div>
 
@@ -540,7 +520,7 @@ export default function Home() {
               <div className="text-center">
                 <Link href="/desert-experiences">
                   <Button className="bg-amber-500 hover:bg-amber-600 transition-colors duration-300">
-                    View All Tours
+                    {t("common.viewAllTours")}
                   </Button>
                 </Link>
               </div>
@@ -558,15 +538,13 @@ export default function Home() {
                 />
               </div>
               <div className="space-y-4 order-1 md:order-2">
-                <h2 className="text-3xl font-bold">Discover Your Next Adventure</h2>
+                <h2 className="text-3xl font-bold">{t("adventure.title")}</h2>
                 <p className="text-lg text-gray-700">
-                  Whether you're looking for a short excursion or a multi-day expedition, we have the perfect adventure
-                  waiting for you. Our tours are designed to showcase the best of Wadi Rum's natural beauty and cultural
-                  heritage.
+                  {t("adventure.description")}
                 </p>
                 <Link href="/desert-experiences">
                   <Button className="bg-amber-500 hover:bg-amber-600 transition-colors duration-300">
-                    View All Tours
+                    {t("common.viewAllTours")}
                   </Button>
                 </Link>
               </div>
@@ -578,8 +556,8 @@ export default function Home() {
       {/* FAQ Section */}
       <AnimateOnScroll>
         <FAQSection
-          title="Frequently Asked Questions"
-          description="Find answers to common questions about visiting Wadi Rum, our tours, and accommodations."
+          title={t("faq.title")}
+          description={t("faq.description")}
           faqs={homepageFaqs}
           className="bg-amber-50"
         />
@@ -599,9 +577,9 @@ export default function Home() {
                   className="h-auto"
                 />
               </div>
-              <h2 className="text-3xl font-bold">What Our Guests Say</h2>
+              <h2 className="text-3xl font-bold">{t("reviews.title")}</h2>
               <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-                Read what travelers are saying about their experiences with Mohammed Mutlak Camp in Wadi Rum.
+                {t("reviews.description")}
               </p>
             </div>
 
@@ -637,8 +615,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "Amazing experience! The camp was comfortable, the food was delicious, and the staff was incredibly
-                  friendly. The jeep tour was the highlight of our trip to Jordan."
+                  {t("reviews.review1.text")}
                 </p>
                 <div className="mt-4">
                   <Image
@@ -685,8 +662,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "The stargazing experience was incredible! Mohammed and his team were excellent hosts, providing great
-                  food and comfortable accommodations. The desert landscape is simply breathtaking."
+                  {t("reviews.review2.text")}
                 </p>
                 <div className="mt-4">
                   <Image
@@ -733,8 +709,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "Our family had an unforgettable time at Mohammed Mutlak Camp. The camel ride at sunset was magical,
-                  and the traditional Bedouin dinner under the stars was a highlight. Highly recommend!"
+                  {t("reviews.review3.text")}
                 </p>
                 <div className="mt-4">
                   <Image
@@ -756,7 +731,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-block px-6 py-3 bg-green-600 text-white font-bold rounded-md hover:bg-green-700 transition duration-300 shadow-md"
               >
-                Read All Reviews
+                {t("common.readAllReviews")}
               </a>
             </div>
           </div>

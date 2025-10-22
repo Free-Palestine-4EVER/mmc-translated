@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -5,8 +7,11 @@ import { BookingForm } from "@/components/booking-form"
 import { Clock, Users, Globe } from "lucide-react"
 import { FAQSection } from "@/components/faq-section"
 import { desertExperienceFaqs } from "@/data/desert-experience-faqs"
+import { useTranslation } from "@/lib/translation-context"
 
 export default function AllInOneDayPage() {
+  const { t } = useTranslation()
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -88,7 +93,7 @@ export default function AllInOneDayPage() {
             <div className="flex items-center">
               <Clock className="mr-2 h-6 w-6 text-amber-600" />
               <div>
-                <div className="text-sm text-gray-600">DURATION</div>
+                <div className="text-sm text-gray-600">{t("common.duration")}</div>
                 <div className="font-medium">Full day (8-9 hours)</div>
               </div>
             </div>
@@ -96,15 +101,15 @@ export default function AllInOneDayPage() {
             <div className="flex items-center">
               <Globe className="mr-2 h-6 w-6 text-amber-600" />
               <div>
-                <div className="text-sm text-gray-600">LANGUAGE</div>
-                <div className="font-medium">Arabic & English</div>
+                <div className="text-sm text-gray-600">{t("common.language")}</div>
+                <div className="font-medium">{t("common.arabicEnglish")}</div>
               </div>
             </div>
 
             <div className="flex items-center">
               <Users className="mr-2 h-6 w-6 text-amber-600" />
               <div>
-                <div className="text-sm text-gray-600">GUESTS</div>
+                <div className="text-sm text-gray-600">{t("common.guests")}</div>
                 <div className="font-medium">From 1 to 6 guests</div>
               </div>
             </div>
@@ -118,7 +123,7 @@ export default function AllInOneDayPage() {
           <div className="grid gap-12 md:grid-cols-3">
             <div className="md:col-span-2">
               <div className="mb-8">
-                <h2 className="mb-2 text-2xl font-bold text-amber-600">Desert Experience</h2>
+                <h2 className="mb-2 text-2xl font-bold text-amber-600">{t("common.desertExperience")}</h2>
                 <h3 className="mb-6 text-3xl font-bold">All in One Day</h3>
 
                 <p className="mb-4 text-gray-700">
@@ -144,7 +149,7 @@ export default function AllInOneDayPage() {
               </div>
 
               <div className="mb-8">
-                <h3 className="mb-4 text-2xl font-bold">Rates</h3>
+                <h3 className="mb-4 text-2xl font-bold">{t("common.rates")}</h3>
                 <div className="overflow-hidden rounded-lg border">
                   <div className="grid grid-cols-2 border-b bg-amber-50">
                     <div className="border-r p-4 font-medium">1 Person</div>
@@ -160,18 +165,18 @@ export default function AllInOneDayPage() {
                   </div>
                   <div className="grid grid-cols-2 border-b">
                     <div className="border-r p-4">Children 5-12 Years</div>
-                    <div className="p-4">Half Price</div>
+                    <div className="p-4">{t("common.halfPrice")}</div>
                   </div>
                   <div className="grid grid-cols-2">
                     <div className="border-r p-4">Kids from 0-5 Years</div>
-                    <div className="p-4">FREE</div>
+                    <div className="p-4">{t("common.free")}</div>
                   </div>
                 </div>
               </div>
 
               <div className="mb-8">
-                <h3 className="mb-4 text-2xl font-bold">Detailed Program</h3>
-                <h4 className="mb-2 text-xl font-semibold">Everything you need to know</h4>
+                <h3 className="mb-4 text-2xl font-bold">{t("common.detailedProgram")}</h3>
+                <h4 className="mb-2 text-xl font-semibold">{t("common.everythingYouNeedToKnow")}</h4>
 
                 <p className="mb-4 text-gray-700">
                   Your "All in One Day" adventure begins in the morning at Wadi Rum Village, where you'll meet your
@@ -257,34 +262,34 @@ export default function AllInOneDayPage() {
               </div>
 
               <div className="mb-8">
-                <h3 className="mb-4 text-2xl font-bold">Included/Excluded</h3>
+                <h3 className="mb-4 text-2xl font-bold">{t("common.includedExcluded")}</h3>
 
                 <div className="mb-4">
-                  <h4 className="mb-2 font-semibold">Included:</h4>
+                  <h4 className="mb-2 font-semibold">{t("common.included")}</h4>
                   <ul className="list-inside list-disc space-y-1 text-gray-700">
-                    <li>Transportation in a 4x4 jeep with Bedouin driver/guide</li>
-                    <li>English-speaking guide</li>
+                    <li>{t("included.jeepTransportation")}</li>
+                    <li>{t("included.englishGuide")}</li>
                     <li>Camel ride (1-1.5 hours)</li>
                     <li>Guided hike</li>
-                    <li>Traditional Bedouin lunch</li>
-                    <li>Bottled water</li>
-                    <li>Traditional Bedouin tea</li>
+                    <li>{t("included.bedouinLunch")}</li>
+                    <li>{t("included.bottledWater")}</li>
+                    <li>{t("included.bedouinTea")}</li>
                     <li>All entrance fees to Wadi Rum Protected Area</li>
-                    <li>Pick-up and drop-off at Wadi Rum Visitor Center</li>
-                    <li>Accommodation in our tented camp</li>
-                    <li>Meals Breakfast & Dinner (Lunch on request)</li>
+                    <li>{t("included.pickupDropoff")}</li>
+                    <li>{t("included.accommodation")}</li>
+                    <li>{t("included.mealsBreakfastDinner")}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="mb-2 font-semibold">Not Included:</h4>
+                  <h4 className="mb-2 font-semibold">{t("common.notIncluded")}</h4>
                   <ul className="list-inside list-disc space-y-1 text-gray-700">
-                    <li>Personal expenses and souvenirs</li>
-                    <li>Gratuities for guides (optional but appreciated)</li>
-                    <li>Travel insurance</li>
-                    <li>Transportation to/from Wadi Rum (can be arranged for an additional fee)</li>
-                    <li>Specialized equipment</li>
-                    <li>Anything not mentioned in the "Included" list</li>
+                    <li>{t("notIncluded.personalExpenses")}</li>
+                    <li>{t("notIncluded.gratuities")}</li>
+                    <li>{t("notIncluded.travelInsurance")}</li>
+                    <li>{t("notIncluded.transportation")}</li>
+                    <li>{t("notIncluded.specializedEquipment")}</li>
+                    <li>{t("notIncluded.anythingNotMentioned")}</li>
                   </ul>
                 </div>
               </div>
@@ -299,7 +304,7 @@ export default function AllInOneDayPage() {
 
       {/* FAQ Section */}
       <FAQSection
-        title="Frequently Asked Questions"
+        title={t("common.frequentlyAskedQuestions")}
         description="Common questions about our All in One Day experience and visiting Wadi Rum"
         faqs={desertExperienceFaqs}
         className="bg-amber-50"
@@ -308,7 +313,7 @@ export default function AllInOneDayPage() {
       {/* You Might Also Like */}
       <section className="bg-gradient-to-b from-amber-50 to-amber-100 py-16">
         <div className="container">
-          <h2 className="mb-12 text-center text-3xl font-bold">You might also like</h2>
+          <h2 className="mb-12 text-center text-3xl font-bold">{t("common.youMightAlsoLike")}</h2>
 
           <div className="grid gap-8 md:grid-cols-3">
             <div className="overflow-hidden rounded-lg bg-white shadow-md">
@@ -327,7 +332,7 @@ export default function AllInOneDayPage() {
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="text-lg font-bold text-amber-600">
-                    From <span>65 JOD</span>
+                    {t("common.from")} <span>65 JOD</span>
                   </div>
                   <Link href="/desert-experiences/full-day-jeep-tour">
                     <Button size="sm" className="bg-amber-500 hover:bg-amber-600">
@@ -354,7 +359,7 @@ export default function AllInOneDayPage() {
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="text-lg font-bold text-amber-600">
-                    From <span>20 JOD</span>
+                    {t("common.from")} <span>20 JOD</span>
                   </div>
                   <Link href="/desert-experiences/camel-rides">
                     <Button size="sm" className="bg-amber-500 hover:bg-amber-600">
@@ -381,7 +386,7 @@ export default function AllInOneDayPage() {
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="text-lg font-bold text-amber-600">
-                    From <span>50 JOD</span>
+                    {t("common.from")} <span>50 JOD</span>
                   </div>
                   <Link href="/accommodation/our-tented-camp">
                     <Button size="sm" className="bg-amber-500 hover:bg-amber-600">
@@ -398,9 +403,9 @@ export default function AllInOneDayPage() {
       {/* Expert Team */}
       <section className="bg-gradient-to-b from-amber-500 to-amber-600 py-16 text-white">
         <div className="container text-center">
-          <h2 className="mb-4 text-2xl font-bold">Our Expert Team</h2>
-          <h3 className="mb-8 text-4xl font-bold">We're here to help, 24/7.</h3>
-          <p className="mb-12 text-lg">Connect with our expert travel consultants to plan your next trip.</p>
+          <h2 className="mb-4 text-2xl font-bold">{t("common.ourExpertTeam")}</h2>
+          <h3 className="mb-8 text-4xl font-bold">{t("common.weAreHereToHelp")}</h3>
+          <p className="mb-12 text-lg">{t("common.connectWithExperts")}</p>
 
           <div className="flex flex-wrap justify-center gap-4">
             <div className="h-16 w-16 overflow-hidden rounded-full">
@@ -460,7 +465,7 @@ export default function AllInOneDayPage() {
               <svg className="mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
               </svg>
-              Chat on Whatsapp
+              {t("common.chatOnWhatsapp")}
             </a>
           </div>
         </div>
