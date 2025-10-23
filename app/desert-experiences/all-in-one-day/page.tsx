@@ -26,9 +26,9 @@ export default function AllInOneDayPage() {
           />
         </div>
         <div className="container relative z-10 flex flex-col items-center justify-center py-24 md:py-32 text-center">
-          <h1 className="text-5xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">All in One Day</h1>
+          <h1 className="text-5xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">{t("allInOneDay.title")}</h1>
           <p className="mt-6 max-w-2xl text-center text-xl">
-            EXPERIENCE MULTIPLE ACTIVITIES IN A SINGLE DAY FOR A COMPREHENSIVE DESERT ADVENTURE
+            {t("allInOneDay.subtitle")}
           </p>
         </div>
       </section>
@@ -94,7 +94,7 @@ export default function AllInOneDayPage() {
               <Clock className="mr-2 h-6 w-6 text-amber-600" />
               <div>
                 <div className="text-sm text-gray-600">{t("common.duration")}</div>
-                <div className="font-medium">Full day (8-9 hours)</div>
+                <div className="font-medium">{t("allInOneDay.duration")}</div>
               </div>
             </div>
 
@@ -110,7 +110,7 @@ export default function AllInOneDayPage() {
               <Users className="mr-2 h-6 w-6 text-amber-600" />
               <div>
                 <div className="text-sm text-gray-600">{t("common.guests")}</div>
-                <div className="font-medium">From 1 to 6 guests</div>
+                <div className="font-medium">{t("allInOneDay.guests")}</div>
               </div>
             </div>
           </div>
@@ -124,27 +124,16 @@ export default function AllInOneDayPage() {
             <div className="md:col-span-2">
               <div className="mb-8">
                 <h2 className="mb-2 text-2xl font-bold text-amber-600">{t("common.desertExperience")}</h2>
-                <h3 className="mb-6 text-3xl font-bold">All in One Day</h3>
+                <h3 className="mb-6 text-3xl font-bold">{t("allInOneDay.title")}</h3>
 
                 <p className="mb-4 text-gray-700">
-                  Our "All in One Day" experience is perfect for travelers with limited time who want to sample the best
-                  of what Wadi Rum has to offer. This comprehensive full-day adventure combines multiple activities to
-                  give you a well-rounded taste of desert life and exploration, all packed into a single unforgettable
-                  day.
+                  {t("allInOneDay.description1")}
                 </p>
                 <p className="mb-4 text-gray-700">
-                  You'll begin with a jeep tour to explore the desert's most spectacular landscapes and landmarks,
-                  followed by a traditional camel ride to experience the desert as Bedouins have for centuries. The day
-                  also includes a short guided hike to a scenic viewpoint, providing yet another perspective on the
-                  magnificent desert terrain. Throughout the day, your experienced Bedouin guide will share insights
-                  about the natural environment, local history, and traditional Bedouin culture.
+                  {t("allInOneDay.description2")}
                 </p>
                 <p className="text-gray-700">
-                  This varied itinerary allows you to experience the desert in different ways, each offering unique
-                  advantages and perspectives. The combination of motorized transport, animal riding, and walking
-                  creates a balanced adventure that engages all your senses and provides a comprehensive introduction to
-                  the wonders of Wadi Rum. It's an ideal choice for first-time visitors or those who want to maximize
-                  their desert experience in a limited timeframe.
+                  {t("allInOneDay.description3")}
                 </p>
               </div>
 
