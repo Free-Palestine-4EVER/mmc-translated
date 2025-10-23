@@ -1411,5 +1411,12 @@
   "allInOneDay.relatedTours.camelRide.subtitle": "Sunset or Sunrise Camel Ride",
   "allInOneDay.relatedTours.camelRide.desc": "Witness the desert's beauty at sunrise or sunset on a peaceful camel ride.",
   "allInOneDay.relatedTours.camelRide.duration": "2-3 hours ride",
-  "allInOneDay.relatedTours.camelRide.price": "25"
+  "allInOneDay.relatedTours.camelRide.price": "25",
+  "allInOneDay.relatedTours.tentedCamp.title": "Our Tented Camp",
+  "allInOneDay.relatedTours.tentedCamp.subtitle": "Comfortable Desert Accommodation",
+  "allInOneDay.relatedTours.tentedCamp.desc": "Stay in our comfortable tented camp with modern amenities, traditional Bedouin hospitality, and stunning desert views.",
+  "allInOneDay.relatedTours.tentedCamp.duration": "Overnight",
+  "allInOneDay.program.closing": "Throughout the day, your guide will ensure your comfort and safety while sharing their knowledge of Bedouin traditions, desert survival skills, and the natural and historical significance of the areas you visit. The varied pace and activities of the \"All in One Day\" experience create a balanced adventure that showcases the best of Wadi Rum in a single day.",
+  "allInOneDay.included.entranceFees": "All entrance fees to Wadi Rum Protected Area",
+  "allInOneDay.faqDescription": "Common questions about our All in One Day experience and visiting Wadi Rum"
 }

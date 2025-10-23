@@ -168,85 +168,55 @@ export default function AllInOneDayPage() {
                 <h4 className="mb-2 text-xl font-semibold">{t("common.everythingYouNeedToKnow")}</h4>
 
                 <p className="mb-4 text-gray-700">
-                  Your "All in One Day" adventure begins in the morning at Wadi Rum Village, where you'll meet your
-                  experienced Bedouin guide. After a brief introduction and overview of the day's activities, you'll set
-                  off to experience the desert in multiple ways.
+                  {t("allInOneDay.programIntro")}
                 </p>
 
                 <div className="mb-6 space-y-4">
                   <div>
-                    <h5 className="font-semibold">Morning Jeep Tour (3-4 hours):</h5>
+                    <h5 className="font-semibold">{t("allInOneDay.program.morning.title")}</h5>
                     <p className="text-gray-700">
-                      The day begins with a jeep tour to explore some of Wadi Rum's most impressive sites. You'll visit
-                      iconic locations such as Lawrence Spring, the Khazali Canyon with its ancient inscriptions, and
-                      the stunning red sand dunes. The jeep allows you to cover significant ground and reach remote
-                      areas that would be inaccessible by other means. Your guide will provide commentary on the
-                      geological features, historical significance, and natural environment of each location.
+                      {t("allInOneDay.program.morning.desc")}
                     </p>
                   </div>
 
                   <div>
-                    <h5 className="font-semibold">Traditional Lunch (1 hour):</h5>
+                    <h5 className="font-semibold">{t("allInOneDay.program.lunch.title")}</h5>
                     <p className="text-gray-700">
-                      Around midday, you'll stop at a scenic spot where your guide will prepare a traditional Bedouin
-                      lunch. Typically, this includes freshly made bread, hummus, salads, grilled vegetables, and
-                      sometimes meat, all cooked over an open fire. This meal provides not only nourishment for the
-                      afternoon's activities but also an authentic taste of Bedouin cuisine and hospitality. You'll have
-                      time to relax in the shade, enjoy your meal, and chat with your guide about Bedouin life.
+                      {t("allInOneDay.program.lunch.desc")}
                     </p>
                   </div>
 
                   <div>
-                    <h5 className="font-semibold">Camel Ride (1-1.5 hours):</h5>
+                    <h5 className="font-semibold">{t("allInOneDay.program.camel.title")}</h5>
                     <p className="text-gray-700">
-                      After lunch, you'll experience the desert as Bedouins have for centuries – on camelback. Your
-                      guide will introduce you to your camel and provide instructions on mounting and riding techniques.
-                      The camel ride offers a different perspective of the desert at a slower, more contemplative pace.
-                      The gentle swaying motion and elevated viewpoint create a unique experience that connects you with
-                      traditional desert travel. Your route will take you through beautiful landscapes, with
-                      opportunities to take photos and enjoy the tranquility of the desert.
+                      {t("allInOneDay.program.camel.desc")}
                     </p>
                   </div>
 
                   <div>
-                    <h5 className="font-semibold">Short Guided Hike (1 hour):</h5>
+                    <h5 className="font-semibold">{t("allInOneDay.program.hike.title")}</h5>
                     <p className="text-gray-700">
-                      Following the camel ride, you'll embark on a short guided hike to a scenic viewpoint. This might
-                      be a small rock bridge, a canyon with interesting features, or a vantage point offering panoramic
-                      views. Walking through the desert allows for a more intimate connection with the environment, as
-                      you feel the sand beneath your feet and notice smaller details that might be missed from a vehicle
-                      or camel. Your guide will point out desert plants, animal tracks, and geological features along
-                      the way.
+                      {t("allInOneDay.program.hike.desc")}
                     </p>
                   </div>
 
                   <div>
-                    <h5 className="font-semibold">Sunset Viewing (30-45 minutes):</h5>
+                    <h5 className="font-semibold">{t("allInOneDay.program.sunset.title")}</h5>
                     <p className="text-gray-700">
-                      As the day draws to a close, you'll head to a perfect spot to watch the sunset over the desert.
-                      The changing light creates a magical atmosphere as the mountains and sand take on golden and then
-                      deep red hues. This peaceful conclusion to the day's activities provides a chance for reflection
-                      and appreciation of the desert's beauty. Your guide may prepare traditional Bedouin tea as you
-                      watch the sunset, adding to the authentic experience.
+                      {t("allInOneDay.program.sunset.desc")}
                     </p>
                   </div>
 
                   <div>
-                    <h5 className="font-semibold">Return to Wadi Rum Village:</h5>
+                    <h5 className="font-semibold">{t("allInOneDay.program.return.title")}</h5>
                     <p className="text-gray-700">
-                      After sunset, you'll return to Wadi Rum Village by jeep, typically arriving between 5:00 and 6:00
-                      PM, depending on the season and sunset time. You'll have experienced the desert in three different
-                      ways – by jeep, by camel, and on foot – giving you a comprehensive understanding and appreciation
-                      of Wadi Rum's natural and cultural wonders.
+                      {t("allInOneDay.program.return.desc")}
                     </p>
                   </div>
                 </div>
 
                 <p className="text-gray-700">
-                  Throughout the day, your guide will ensure your comfort and safety while sharing their knowledge of
-                  Bedouin traditions, desert survival skills, and the natural and historical significance of the areas
-                  you visit. The varied pace and activities of the "All in One Day" experience create a balanced
-                  adventure that showcases the best of Wadi Rum in a single day.
+                  {t("allInOneDay.program.closing")}
                 </p>
               </div>
 
@@ -258,12 +228,12 @@ export default function AllInOneDayPage() {
                   <ul className="list-inside list-disc space-y-1 text-gray-700">
                     <li>{t("included.jeepTransportation")}</li>
                     <li>{t("included.englishGuide")}</li>
-                    <li>Camel ride (1-1.5 hours)</li>
-                    <li>Guided hike</li>
+                    <li>{t("allInOneDay.included.camelRide")}</li>
+                    <li>{t("allInOneDay.included.hiking")}</li>
                     <li>{t("included.bedouinLunch")}</li>
                     <li>{t("included.bottledWater")}</li>
                     <li>{t("included.bedouinTea")}</li>
-                    <li>All entrance fees to Wadi Rum Protected Area</li>
+                    <li>{t("allInOneDay.included.entranceFees")}</li>
                     <li>{t("included.pickupDropoff")}</li>
                     <li>{t("included.accommodation")}</li>
                     <li>{t("included.mealsBreakfastDinner")}</li>
@@ -294,7 +264,7 @@ export default function AllInOneDayPage() {
       {/* FAQ Section */}
       <FAQSection
         title={t("common.frequentlyAskedQuestions")}
-        description="Common questions about our All in One Day experience and visiting Wadi Rum"
+        description={t("allInOneDay.faqDescription")}
         faqs={desertExperienceFaqs}
         className="bg-amber-50"
       />
@@ -308,16 +278,15 @@ export default function AllInOneDayPage() {
             <div className="overflow-hidden rounded-lg bg-white shadow-md">
               <div className="relative h-48">
                 <div className="absolute left-2 top-2 z-10 rounded bg-amber-500 px-2 py-1 text-xs font-medium text-white">
-                  7 hours
+                  {t("allInOneDay.relatedTours.fullDay.duration")}
                 </div>
                 <Image src="/images/full-day-jeep.jpg" alt="Full Day Jeep Tour" fill className="object-cover" />
               </div>
               <div className="p-4">
-                <h3 className="mb-2 text-xl font-bold">Full Day Jeep Tour</h3>
-                <p className="mb-4 text-sm text-gray-600">Comprehensive Desert Exploration</p>
+                <h3 className="mb-2 text-xl font-bold">{t("allInOneDay.relatedTours.fullDay.title")}</h3>
+                <p className="mb-4 text-sm text-gray-600">{t("allInOneDay.relatedTours.fullDay.subtitle")}</p>
                 <p className="mb-6 text-sm text-gray-700">
-                  A comprehensive 7-hour jeep tour exploring the vast beauty of Wadi Rum, including hidden canyons and
-                  ancient inscriptions.
+                  {t("allInOneDay.relatedTours.fullDay.desc")}
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="text-lg font-bold text-amber-600">
@@ -325,7 +294,7 @@ export default function AllInOneDayPage() {
                   </div>
                   <Link href="/desert-experiences/full-day-jeep-tour">
                     <Button size="sm" className="bg-amber-500 hover:bg-amber-600">
-                      Book Now
+                      {t("common.bookNow")}
                     </Button>
                   </Link>
                 </div>
@@ -335,16 +304,15 @@ export default function AllInOneDayPage() {
             <div className="overflow-hidden rounded-lg bg-white shadow-md">
               <div className="relative h-48">
                 <div className="absolute left-2 top-2 z-10 rounded bg-amber-500 px-2 py-1 text-xs font-medium text-white">
-                  2-3 hours ride
+                  {t("allInOneDay.relatedTours.camelRide.duration")}
                 </div>
                 <Image src="/images/camel-ride.jpg" alt="Camel Ride" fill className="object-cover" />
               </div>
               <div className="p-4">
-                <h3 className="mb-2 text-xl font-bold">Camel Ride</h3>
-                <p className="mb-4 text-sm text-gray-600">Sunset or Sunrise Camel Ride</p>
+                <h3 className="mb-2 text-xl font-bold">{t("allInOneDay.relatedTours.camelRide.title")}</h3>
+                <p className="mb-4 text-sm text-gray-600">{t("allInOneDay.relatedTours.camelRide.subtitle")}</p>
                 <p className="mb-6 text-sm text-gray-700">
-                  Witness the desert's beauty at sunrise or sunset on a peaceful camel ride, guided by our experts for
-                  an unforgettable experience.
+                  {t("allInOneDay.relatedTours.camelRide.desc")}
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="text-lg font-bold text-amber-600">
@@ -352,7 +320,7 @@ export default function AllInOneDayPage() {
                   </div>
                   <Link href="/desert-experiences/camel-rides">
                     <Button size="sm" className="bg-amber-500 hover:bg-amber-600">
-                      Book Now
+                      {t("common.bookNow")}
                     </Button>
                   </Link>
                 </div>
@@ -362,16 +330,15 @@ export default function AllInOneDayPage() {
             <div className="overflow-hidden rounded-lg bg-white shadow-md">
               <div className="relative h-48">
                 <div className="absolute left-2 top-2 z-10 rounded bg-amber-500 px-2 py-1 text-xs font-medium text-white">
-                  Overnight
+                  {t("allInOneDay.relatedTours.tentedCamp.duration")}
                 </div>
                 <Image src="/images/tented-camp.jpg" alt="Our Tented Camp" fill className="object-cover" />
               </div>
               <div className="p-4">
-                <h3 className="mb-2 text-xl font-bold">Our Tented Camp</h3>
-                <p className="mb-4 text-sm text-gray-600">Comfortable Desert Accommodation</p>
+                <h3 className="mb-2 text-xl font-bold">{t("allInOneDay.relatedTours.tentedCamp.title")}</h3>
+                <p className="mb-4 text-sm text-gray-600">{t("allInOneDay.relatedTours.tentedCamp.subtitle")}</p>
                 <p className="mb-6 text-sm text-gray-700">
-                  Stay in our comfortable tented camp with modern amenities, traditional Bedouin hospitality, and
-                  stunning desert views.
+                  {t("allInOneDay.relatedTours.tentedCamp.desc")}
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="text-lg font-bold text-amber-600">
@@ -379,7 +346,7 @@ export default function AllInOneDayPage() {
                   </div>
                   <Link href="/accommodation/our-tented-camp">
                     <Button size="sm" className="bg-amber-500 hover:bg-amber-600">
-                      Book Now
+                      {t("common.bookNow")}
                     </Button>
                   </Link>
                 </div>
