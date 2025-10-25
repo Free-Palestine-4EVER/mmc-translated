@@ -1,32 +1,30 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { AnimateOnScroll } from "@/components/animate-on-scroll"
 import { BookingForm } from "@/components/booking-form"
-import type { Metadata } from "next"
-
-export const metadata: Metadata = {
-  title: "Classic Adventure Package | 2-Day Wadi Rum Experience",
-  description:
-    "Experience the perfect introduction to Wadi Rum with our 2-day Classic Adventure package combining a full-day jeep tour and half-day hiking experience.",
-}
+import { useTranslation } from "@/lib/translation-context"
 
 export default function ClassicAdventurePage() {
+  const { t } = useTranslation()
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
       <div className="relative h-[50vh] md:h-[60vh] lg:h-[70vh] w-full">
         <Image
           src="/images/full-day-jeep.jpg"
-          alt="Classic Adventure Package in Wadi Rum"
+          alt={t('pkgClassic.hero.imageAlt')}
           fill
           priority
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">CLASSIC ADVENTURE PACKAGE</h1>
-          <p className="text-lg md:text-xl max-w-3xl">A perfect 2-day introduction to Wadi Rum's stunning landscapes</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{t('pkgClassic.hero.title')}</h1>
+          <p className="text-lg md:text-xl max-w-3xl">{t('pkgClassic.hero.subtitle')}</p>
         </div>
       </div>
 
@@ -36,45 +34,35 @@ export default function ClassicAdventurePage() {
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-2">
-                <h2 className="text-3xl font-bold mb-6">Package Overview</h2>
-                <p className="text-lg mb-6">
-                  Our Classic Adventure package is the perfect introduction to Wadi Rum, combining a comprehensive
-                  full-day jeep tour with a half-day hiking experience. This carefully crafted 2-day itinerary allows
-                  you to experience the desert from different perspectives, seeing both the iconic landmarks and hidden
-                  gems of Wadi Rum.
-                </p>
-                <p className="text-lg mb-6">
-                  You'll spend one night at our traditional Bedouin camp, enjoying authentic cuisine under the stars and
-                  experiencing the tranquility of the desert at night. This package is ideal for first-time visitors who
-                  want to maximize their time in Wadi Rum and experience both motorized exploration and on-foot
-                  adventure.
-                </p>
+                <h2 className="text-3xl font-bold mb-6">{t('pkgClassic.overview.title')}</h2>
+                <p className="text-lg mb-6">{t('pkgClassic.overview.p1')}</p>
+                <p className="text-lg mb-6">{t('pkgClassic.overview.p2')}</p>
                 <div className="bg-amber-50 p-6 rounded-lg mb-8">
-                  <h3 className="text-xl font-bold mb-4">Package Highlights</h3>
+                  <h3 className="text-xl font-bold mb-4">{t('pkgClassic.highlights.title')}</h3>
                   <ul className="space-y-2">
                     <li className="flex items-start">
                       <span className="text-amber-600 mr-2">✓</span>
-                      <span>Comprehensive full-day jeep tour covering all major sites</span>
+                      <span>{t('pkgClassic.highlights.item1')}</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-amber-600 mr-2">✓</span>
-                      <span>Half-day guided hiking experience through scenic canyons</span>
+                      <span>{t('pkgClassic.highlights.item2')}</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-amber-600 mr-2">✓</span>
-                      <span>Overnight stay in a traditional Bedouin camp</span>
+                      <span>{t('pkgClassic.highlights.item3')}</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-amber-600 mr-2">✓</span>
-                      <span>Authentic Bedouin meals and traditional tea</span>
+                      <span>{t('pkgClassic.highlights.item4')}</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-amber-600 mr-2">✓</span>
-                      <span>Sunset viewing from a panoramic location</span>
+                      <span>{t('pkgClassic.highlights.item5')}</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-amber-600 mr-2">✓</span>
-                      <span>Stargazing opportunity in one of the world's darkest skies</span>
+                      <span>{t('pkgClassic.highlights.item6')}</span>
                     </li>
                   </ul>
                 </div>
