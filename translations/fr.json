@@ -1512,5 +1512,81 @@
   "accommodation.tentedCamp.title": "Mohammed Mutlak Camp",
   "accommodation.tentedCamp.description": "MMC boasts several firsts: it is the first authorized Camp of the Wadi Rum Protected Area. It is the one best positioned, and enjoys unforgettable 360-degree panoramas. Ideal for enjoying sunrises and sunsets at any time of day or night. Hundreds of rave reviews underscore this level of excellence throughout. Great care, cleanliness, peace, and safety in the middle of the desert and be able to enjoy some comfort!",
   "accommodation.bivouac.title": "Bivouac camping under the stars",
-  "accommodation.bivouac.description": "Sleeping under the starry sky of the desert is a classic that is part of every traveler's imagination. And we love to indulge our guests by making our traditions and our Bedouin culture available to them. An expert guide will accompany you and set up a bivouac. It will provide what is necessary to guarantee you a comfortable rest and will remain near your sleep."
+  "accommodation.bivouac.description": "Sleeping under the starry sky of the desert is a classic that is part of every traveler's imagination. And we love to indulge our guests by making our traditions and our Bedouin culture available to them. An expert guide will accompany you and set up a bivouac. It will provide what is necessary to guarantee you a comfortable rest and will remain near your sleep.",
+
+  "bubbleCamp.hero.title": "Bubble Camp Partner",
+  "bubbleCamp.hero.subtitle": "EXPERIENCE LUXURY UNDER THE STARS IN OUR TRANSPARENT BUBBLE ACCOMMODATIONS",
+  "bubbleCamp.hero.imageAlt": "Bubble Camp Experience",
+
+  "bubbleCamp.intro.subtitle": "Bubble Camp Experience",
+  "bubbleCamp.intro.title": "Sleep Under the Stars in Comfort",
+  "bubbleCamp.intro.description": "In partnership with our premium bubble accommodation providers, we offer a unique opportunity to experience the magic of Wadi Rum's night sky from the comfort of a transparent bubble dome. Choose between our luxury or standard options for an unforgettable desert night.",
+
+  "bubbleCamp.luxury.title": "Luxury Bubble Experience",
+  "bubbleCamp.luxury.imageAlt": "Luxury Bubble Camp",
+  "bubbleCamp.luxury.description": "Our premium bubble accommodations offer the ultimate desert glamping experience. Each luxury bubble features a comfortable king-size bed with premium linens, private bathroom facilities, air conditioning, and a private terrace for stargazing. The transparent ceiling provides unobstructed views of the night sky, while the opaque walls ensure privacy.",
+  "bubbleCamp.luxury.amenity1": "King-size bed with luxury linens",
+  "bubbleCamp.luxury.amenity2": "Private en-suite bathroom",
+  "bubbleCamp.luxury.amenity3": "Climate control (heating/cooling)",
+  "bubbleCamp.luxury.amenity4": "Private terrace with seating area",
+  "bubbleCamp.luxury.amenity5": "Gourmet dinner and breakfast included",
+  "bubbleCamp.luxury.amenity6": "Welcome drink and amenities",
+  "bubbleCamp.luxury.price": "Price: 120 JOD per Person",
+  "bubbleCamp.luxury.priceNote": "(Based on double occupancy)",
+  "bubbleCamp.luxury.bookButton": "Book Luxury Bubble",
+
+  "bubbleCamp.standard.title": "Normal Bubble Experience",
+  "bubbleCamp.standard.imageAlt": "Standard Bubble Camp",
+  "bubbleCamp.standard.description": "Our standard bubble accommodations offer a comfortable and unique way to experience the desert night sky. Each bubble features a comfortable queen-size bed, shared bathroom facilities in a nearby building, and a small seating area. The transparent ceiling provides stunning views of the stars, while the partially opaque walls ensure privacy.",
+  "bubbleCamp.standard.amenity1": "Queen-size bed with comfortable linens",
+  "bubbleCamp.standard.amenity2": "Access to shared bathroom facilities",
+  "bubbleCamp.standard.amenity3": "Fan for air circulation",
+  "bubbleCamp.standard.amenity4": "Small seating area",
+  "bubbleCamp.standard.amenity5": "Traditional dinner and breakfast included",
+  "bubbleCamp.standard.amenity6": "Welcome tea",
+  "bubbleCamp.standard.price": "Price: 80 JOD per person",
+  "bubbleCamp.standard.priceNote": "(Based on double occupancy)",
+  "bubbleCamp.standard.bookButton": "Book Standard Bubble",
+
+  "bubbleCamp.experience.title": "The Bubble Camp Experience",
+
+  "bubbleCamp.stargazing.title": "Stargazing Paradise",
+  "bubbleCamp.stargazing.description1": "Wadi Rum is renowned for its clear night skies, free from light pollution, making it one of the best places in the world for stargazing. Our bubble accommodations are strategically placed to offer the best views of the night sky, allowing you to fall asleep under a blanket of stars.",
+  "bubbleCamp.stargazing.description2": "During certain times of the year, you may witness meteor showers, clearly see the Milky Way, and identify constellations with unprecedented clarity. Our staff can provide information about the night sky and even arrange for a telescope to enhance your stargazing experience.",
+  "bubbleCamp.stargazing.imageAlt": "Stargazing from Bubble",
+
+  "bubbleCamp.dining.title": "Culinary Delights",
+  "bubbleCamp.dining.description1": "Your bubble camp experience includes authentic Bedouin cuisine prepared with fresh, local ingredients. Dinner is served under the stars, offering a magical dining experience in the heart of the desert.",
+  "bubbleCamp.dining.description2": "Wake up to a delicious breakfast with a view of the desert landscape bathed in morning light. Special dietary requirements can be accommodated with advance notice, ensuring everyone can enjoy the culinary aspect of their desert stay.",
+  "bubbleCamp.dining.imageAlt": "Dining Experience",
+
+  "bubbleCamp.activities.title": "Desert Activities",
+  "bubbleCamp.activities.description1": "Enhance your bubble camp stay with a range of desert activities. We can arrange jeep tours, camel rides, hiking expeditions, and sandboarding experiences to make your Wadi Rum adventure complete.",
+  "bubbleCamp.activities.description2": "Sunset and sunrise are particularly magical times in the desert. Our bubble camps are positioned to offer spectacular views of these daily phenomena, creating perfect photo opportunities and memorable moments.",
+  "bubbleCamp.activities.imageAlt": "Desert Activities",
+
+  "bubbleCamp.booking.title": "Book Your Bubble Experience",
+
+  "bubbleCamp.faq.title": "Frequently Asked Questions",
+
+  "bubbleCamp.faq.q1": "Are the bubbles air-conditioned?",
+  "bubbleCamp.faq.a1": "Luxury bubbles are equipped with climate control systems that provide both heating and cooling. Standard bubbles have fans for air circulation but do not have full air conditioning. The desert temperature drops significantly at night, making for comfortable sleeping conditions in most seasons.",
+
+  "bubbleCamp.faq.q2": "How private are the bubbles?",
+  "bubbleCamp.faq.a2": "Both luxury and standard bubbles offer privacy. The ceiling is transparent for stargazing, while the walls are opaque or partially opaque. The bubbles are spaced apart to ensure privacy, and each has its own designated area. Luxury bubbles include private bathrooms, while standard bubbles share facilities.",
+
+  "bubbleCamp.faq.q3": "Is electricity available in the bubbles?",
+  "bubbleCamp.faq.a3": "Yes, all bubbles have electricity for lighting and to charge your devices. Luxury bubbles have additional electrical outlets for convenience. Power is provided through a combination of solar energy and generators.",
+
+  "bubbleCamp.faq.q4": "What is the best time to experience the bubble camp?",
+  "bubbleCamp.faq.a4": "The bubble camp is available year-round, but spring (March to May) and autumn (September to November) offer the most comfortable temperatures. Summer nights (June to August) can be pleasantly cool despite hot days. Winter (December to February) provides exceptionally clear skies but can be cold at night, though our bubbles are equipped with heating.",
+
+  "bubbleCamp.faq.q5": "Can children stay in the bubble accommodations?",
+  "bubbleCamp.faq.a5": "Yes, children are welcome. Luxury bubbles can accommodate up to two adults and one child, while standard bubbles can accommodate two adults. For families, we recommend booking adjacent bubbles or discussing options with our booking team to find the best arrangement for your family's needs.",
+
+  "bubbleCamp.expertTeam.title": "Our Expert Team",
+  "bubbleCamp.expertTeam.subtitle": "We're here to help, 24/7.",
+  "bubbleCamp.expertTeam.description": "Connect with our expert travel consultants to plan your next trip.",
+  "bubbleCamp.expertTeam.teamMemberAlt": "Team Member",
+  "bubbleCamp.expertTeam.chatButton": "Chat on Whatsapp"
 }
