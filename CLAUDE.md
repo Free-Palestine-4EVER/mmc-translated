@@ -6,7 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Next.js 14 booking and content management system for Mohammed Mutlak Camp, a Bedouin desert tourism company in Wadi Rum, Jordan. The application features a complex booking system with dynamic pricing, 90+ blog posts, tour/package offerings, and accommodation options.
 
-**Important**: The Next.js project is located in the `mmcupdated/` subdirectory. All commands must be run from within this directory using `cd mmcupdated && <command>`.
+**Critical**: The Next.js project is located in the `mmcupdated/` subdirectory. All commands must be run from within this directory using `cd mmcupdated && <command>`.
+
+**Active Translation Project**: This codebase is undergoing active translation from English-only to a 6-language multilingual system (en, ar, es, fr, de, it). See the "Translation System" section below for critical workflow details. Check `TRANSLATION_PROGRESS.md` for current status.
 
 ## Build Commands
 
@@ -34,11 +36,26 @@ The email system has graceful degradation - if `RESEND_API_KEY` is not set, it f
 ### Next.js 14 App Router Structure
 
 - **app/**: File-based routing with React Server Components as default
-  - Most pages are server components (static generation)
-  - Client components marked with `"use client"` directive (forms, modals, interactive elements)
+  - **IMPORTANT**: Most pages are being converted to client components for translation support
+  - Client components marked with `"use client"` directive (forms, modals, interactive elements, translated pages)
   - Server actions in `app/actions/` for email sending
   - Dynamic routes: `blog/[slug]/page.tsx` for 90+ blog posts
-  - Each page exports static `metadata` for SEO
+  - Each page originally exported static `metadata` for SEO (being removed during translation conversion)
+
+  **Key Routes**:
+  - `/` - Homepage
+  - `/desert-experiences` - Tour listing page (14+ tours)
+  - `/desert-experiences/[tour-slug]` - Individual tour pages
+  - `/packages` - Multi-day package listing (7 packages)
+  - `/packages/[package-slug]` - Individual package detail pages
+  - `/accommodation` - Accommodation listing
+  - `/accommodation/our-tented-camp` - Main camp details
+  - `/accommodation/bivouac` - Bivouac camping details
+  - `/bubble-camp-partner` - Bubble camp partnership page
+  - `/blog` - Blog listing with search/filter
+  - `/blog/[slug]` - Individual blog posts (90+ posts)
+  - `/about-us` - Company information
+  - `/contact-us` - Contact form
 
 - **components/**: Split between Shadcn UI primitives (`components/ui/`) and custom components
   - 45+ Radix UI components in `components/ui/`
@@ -81,39 +98,75 @@ The booking system uses a complex multi-step form (`components/booking-form.tsx`
 - Error handling with user-friendly messages
 - Emails sent to `mohammed.mutlak.camp@gmail.com`
 
-### Internationalization (i18n)
+### Translation System (i18n)
 
-The application supports 6 languages with a custom client-side translation system:
+**CRITICAL**: This is an active, ongoing translation project. Always check `TRANSLATION_PROGRESS.md` for current status before adding new pages or components.
 
+#### Overview
 - **Languages**: English (en), Arabic (ar), Spanish (es), French (fr), German (de), Italian (it)
 - **Default Language**: English (en)
 - **Implementation**: `TranslationProvider` context in `lib/translation-context.tsx`
-- **Translation files**: JSON files in `translations/` directory
-- **RTL Support**: Automatic `dir="rtl"` attribute for Arabic language
+- **Translation files**: Flat JSON files in `translations/` directory (~1,515 keys)
+- **RTL Support**: Automatic `dir="rtl"` attribute for Arabic
 - **Storage**: Language preference saved to `localStorage`
 
-- **Automatic Language Detection**:
-  - Uses IP-based geolocation (`lib/geolocation.ts`) to detect user's country
-  - Automatically sets appropriate language on first visit
-  - Maps 50+ countries to their primary languages
-  - Uses ipapi.co free API with 3-second timeout
-  - Falls back to English if detection fails
-  - User's manual language selection always takes priority over auto-detection
+#### Automatic Language Detection
+- Uses IP-based geolocation (`lib/geolocation.ts`) to detect user's country
+- Maps 50+ countries to their primary languages
+- Uses ipapi.co free API with 3-second timeout
+- Falls back to English if detection fails
 
-- **Language Priority**:
-  1. User's saved preference (from `localStorage`)
-  2. IP-based country detection
-  3. English (default fallback)
+#### Language Priority
+1. User's saved preference (from `localStorage`)
+2. IP-based country detection
+3. English (default fallback)
 
-- **Usage**:
-  ```tsx
-  import { useTranslation } from '@/lib/translation-context'
+#### Usage Pattern
+```tsx
+// Server components CANNOT use translations - must convert to client component
+"use client"
+import { useTranslation } from '@/lib/translation-context'
 
-  function Component() {
-    const { t, language, setLanguage } = useTranslation()
-    return <h1>{t('welcome.title')}</h1>
-  }
-  ```
+function Component() {
+  const { t, language, setLanguage } = useTranslation()
+  return <h1>{t('namespace.section.key')}</h1>
+}
+```
+
+#### Translation Workflow (CRITICAL)
+
+When adding or modifying pages with text content:
+
+1. **Add translation keys to `translations/en.json`** (master file)
+   - Use nested namespacing: `pageName.section.subsection`
+   - Reuse common keys from `common.*` namespace
+   - Example: `desertExperiences.hero.title`
+
+2. **Sync to all language files** using helper script:
+   ```bash
+   cd mmcupdated && node find-missing-keys.js  # Check for missing keys
+   ```
+   - Manually copy keys to `ar.json`, `es.json`, `fr.json`, `de.json`, `it.json`
+   - Initially use English text as placeholder (will be professionally translated later)
+
+3. **Convert page to client component**:
+   - Remove `export const metadata: Metadata = {...}` (causes errors in client components)
+   - Add `"use client"` directive at top
+   - Import and use `useTranslation()` hook
+   - Replace all hardcoded text with `t('key')` calls
+
+4. **Test language switching** to ensure all keys resolve properly
+
+5. **Helper scripts available**:
+   - `find-missing-keys.js` - Detects translation keys used in code but missing from `en.json`
+   - `scripts/copy-translations.js` - Template for copying new keys across language files
+   - `add_balloon_translations.js` - Example of bulk translation addition
+
+#### Important Translation Constraints
+- **Server components cannot use translations** - they must be converted to client components
+- **Metadata must be removed** when converting to client components (or handled differently)
+- **All 6 language files must stay in sync** - missing keys will display as the key name itself
+- **Common namespace** (`common.*`) should be used for reusable strings (e.g., `common.bookNow`, `common.from`)
 - **Language Selector**: Available in site header via `components/language-selector.tsx`
 
 ### Client-Side Interactive Features
@@ -149,12 +202,27 @@ Blog posts exported from `data/blog-posts/index.ts` as a single array.
 
 ### Pricing Engine
 
-Complex pricing logic in booking forms:
-- Group size tiers (1-100 people) with different per-person rates
-- Tour-specific pricing stored in data objects
-- Accommodation pricing with conditional free inclusion
-- Package bundling with fixed prices
-- Special cases (e.g., stargazing: 100 JOD for 1-3 people)
+The booking forms (`components/booking-form.tsx` and `components/bivouac-booking-form.tsx`) implement complex pricing logic:
+
+#### Dynamic Pricing Rules
+- **Group size tiers**: Different per-person rates based on group size (1-100 people)
+- **Tour-specific pricing**: Each desert experience has its own pricing structure stored in the component
+- **Accommodation pricing**: Conditional free inclusion based on selections
+- **Package bundling**: Fixed prices for multi-day packages
+- **Special cases**:
+  - Stargazing: 100 JOD flat rate for 1-3 people
+  - Hot Air Balloon: Premium pricing tier
+- **15% discount logic**: Applied to non-hot-air-balloon items
+- **Conditional free tented camp**: Included based on booking selections
+
+#### Pre-population
+- Supports `tourName` and `packageName` props from URL parameters
+- Automatically selects and prices the specified tour/package on form load
+
+#### Form State Management
+- Uses React Hook Form for complex multi-step form state
+- Zod schemas for validation
+- Server action integration for email sending (`app/actions/send-booking-email.ts`)
 
 ## Key Configuration Files
 
@@ -174,22 +242,19 @@ Complex pricing logic in booking forms:
 
 ## Common Development Patterns
 
-### Adding Translations
+### Git Workflow
 
-When adding new translatable content:
+**Repository**: https://github.com/Free-Palestine-4EVER/mmc-translated.git (translation fork)
 
-1. Add key-value pairs to all translation files in `translations/`:
-   - `en.json` (English - primary)
-   - `ar.json` (Arabic - RTL)
-   - `es.json`, `fr.json`, `de.json`, `it.json`
-
-2. Use the translation hook in components:
-```tsx
-const { t } = useTranslation()
-<p>{t('new.translation.key')}</p>
+Standard workflow for translation work:
+```bash
+cd mmcupdated
+git add .
+git commit -m "Descriptive commit message"
+git push origin main
 ```
 
-3. For Arabic RTL: Ensure layouts work bidirectionally or add specific RTL styles when needed.
+Note: Repository has no main branch set - always use 'main' explicitly for pushes.
 
 ### Adding a New Blog Post
 
@@ -257,13 +322,15 @@ export default function TourPage() {
 - **Static Export Ready**: Images are unoptimized for compatibility
 - **Mobile-First**: Always implement mobile layout before desktop
 - **Server Components**: Default rendering strategy; only use `"use client"` when needed for interactivity
-- **Client Components**: Required for hooks (`useState`, `useEffect`), event handlers, browser APIs, and the translation system
+- **Client Components**: Required for hooks (`useState`, `useEffect`), event handlers, browser APIs, and **the translation system** (critical limitation)
+- **Translation Requirement**: Any page with user-visible text must be a client component to support i18n
 - **Path Aliases**: Use `@/` prefix for imports (e.g., `import { cn } from '@/lib/utils'`)
 - **Image Paths**: Public images referenced as `/images/filename.jpg`
-- **WhatsApp Links**: Direct contact via `wa.me` links throughout the site
+- **WhatsApp Links**: Direct contact via `wa.me` links (https://wa.link/mwcxbb)
 - **LocalStorage Keys**:
   - `language` - User's selected language preference
   - `hasSeenDiscountModal` - Tracks if discount modal was shown
+- **Build Warnings**: Line ending warnings (CRLF) are benign on Windows development environment
 
 ## Dependencies of Note
 
@@ -276,14 +343,70 @@ export default function TourPage() {
 - **next-themes**: Dark mode support (configured but not heavily used)
 - **Vercel Analytics**: Page tracking
 
+## Utility Scripts
+
+Located in project root and `scripts/` directory:
+
+- **`find-missing-keys.js`**: Scans specified tour pages for translation keys and reports which ones are missing from `translations/en.json`. Modify the `tourPages` array to check different files.
+  ```bash
+  cd mmcupdated && node find-missing-keys.js
+  ```
+
+- **`scripts/copy-translations.js`**: Template script for bulk-copying new translation keys from English to other language files with placeholder markers.
+
+- **`add_balloon_translations.js`**: Example script showing how to add specific translations to language files programmatically.
+
 ## Testing
 
-No test suite currently configured. Manual testing recommended for:
+No automated test suite currently configured. Manual testing recommended for:
 - Booking form calculations (verify pricing at various group sizes)
 - Email sending via Resend (or mock email in development)
 - Mobile responsiveness across breakpoints
 - Schema.org validation via Google Rich Results Test
-- RTL layout for Arabic language
-- Translation completeness across all 6 languages
+- RTL layout for Arabic language (use browser DevTools to verify `dir="rtl"`)
+- Translation completeness across all 6 languages (use `find-missing-keys.js`)
 - WhatsApp widget visibility (should hide when mobile menu is open)
 - Discount modal appearance (once per browser, 5-second delay)
+- Language switching works on all translated pages
+
+## Quick Reference
+
+### Starting Development
+```bash
+cd mmcupdated
+npm run dev
+# Open http://localhost:3000
+```
+
+### Translation Task Checklist
+When translating a new page:
+- [ ] Read current page to understand structure
+- [ ] Add all text content as translation keys to `translations/en.json`
+- [ ] Copy all new keys to other 5 language files (ar, es, fr, de, it)
+- [ ] Convert page to client component (`"use client"`)
+- [ ] Remove metadata export (if present)
+- [ ] Import and use `useTranslation()` hook
+- [ ] Replace all hardcoded text with `t('key')` calls
+- [ ] Test in browser with language switching
+- [ ] Run `node find-missing-keys.js` to verify no missing keys
+- [ ] Commit and push to GitHub
+
+### Common File Locations
+- Translation files: `translations/*.json`
+- Translation context: `lib/translation-context.tsx`
+- Geolocation: `lib/geolocation.ts`
+- Schema helpers: `lib/schema.ts`
+- Booking forms: `components/booking-form.tsx`, `components/bivouac-booking-form.tsx`
+- Site header/footer: `components/site-header.tsx`, `components/site-footer.tsx`
+- Blog data: `data/blog-posts/` (90+ individual files)
+- FAQ data: `data/desert-experience-faqs.ts`
+- Email action: `app/actions/send-booking-email.ts`
+
+### Key Components
+- `<TranslationProvider>`: Wraps app in `app/layout.tsx`
+- `useTranslation()`: Hook for accessing translations
+- `<BookingForm>`: Main multi-step booking form with pricing
+- `<LanguageSelector>`: Language switcher in header
+- `<WhatsAppChat>`: Floating chat button
+- `<DiscountModal>`: One-time promotional modal
+- `<FAQSection>`: Reusable FAQ accordion

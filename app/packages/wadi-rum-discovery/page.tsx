@@ -471,7 +471,7 @@ export default function WadiRumDiscoveryPage() {
                   <div className="flex justify-between items-center">
                     <p className="font-semibold text-amber-600">{t('pkgDiscovery.related.pkg1.price')}</p>
                     <Link href="/packages/ultimate-adventure">
-                      <Button className="bg-amber-500 hover:bg-amber-600">View Details</Button>
+                      <Button className="bg-amber-500 hover:bg-amber-600">{t('common.viewDetails')}</Button>
                     </Link>
                   </div>
                 </div>
@@ -491,7 +491,7 @@ export default function WadiRumDiscoveryPage() {
                   <div className="flex justify-between items-center">
                     <p className="font-semibold text-amber-600">{t('pkgDiscovery.related.pkg2.price')}</p>
                     <Link href="/packages/jordan-heights">
-                      <Button className="bg-amber-500 hover:bg-amber-600">View Details</Button>
+                      <Button className="bg-amber-500 hover:bg-amber-600">{t('common.viewDetails')}</Button>
                     </Link>
                   </div>
                 </div>
@@ -516,7 +516,7 @@ export default function WadiRumDiscoveryPage() {
                   <div className="flex justify-between items-center">
                     <p className="font-semibold text-amber-600">{t('pkgDiscovery.related.pkg3.price')}</p>
                     <Link href="/packages/bedouin-experience">
-                      <Button className="bg-amber-500 hover:bg-amber-600">View Details</Button>
+                      <Button className="bg-amber-500 hover:bg-amber-600">{t('common.viewDetails')}</Button>
                     </Link>
                   </div>
                 </div>

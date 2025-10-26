@@ -446,7 +446,7 @@ export default function UltimateAdventurePage() {
                   <div className="flex justify-between items-center">
                     <p className="font-semibold text-amber-600">{t('pkgUltimate.related.pkg1.price')}</p>
                     <Link href="/packages/jordan-heights">
-                      <Button className="bg-amber-500 hover:bg-amber-600">View Details</Button>
+                      <Button className="bg-amber-500 hover:bg-amber-600">{t('common.viewDetails')}</Button>
                     </Link>
                   </div>
                 </div>
@@ -471,7 +471,7 @@ export default function UltimateAdventurePage() {
                   <div className="flex justify-between items-center">
                     <p className="font-semibold text-amber-600">{t('pkgUltimate.related.pkg2.price')}</p>
                     <Link href="/packages/wadi-rum-discovery">
-                      <Button className="bg-amber-500 hover:bg-amber-600">View Details</Button>
+                      <Button className="bg-amber-500 hover:bg-amber-600">{t('common.viewDetails')}</Button>
                     </Link>
                   </div>
                 </div>
@@ -491,7 +491,7 @@ export default function UltimateAdventurePage() {
                   <div className="flex justify-between items-center">
                     <p className="font-semibold text-amber-600">{t('pkgUltimate.related.pkg3.price')}</p>
                     <Link href="/packages/desert-explorer">
-                      <Button className="bg-amber-500 hover:bg-amber-600">View Details</Button>
+                      <Button className="bg-amber-500 hover:bg-amber-600">{t('common.viewDetails')}</Button>
                     </Link>
                   </div>
                 </div>

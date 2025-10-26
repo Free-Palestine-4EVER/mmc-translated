@@ -15,7 +15,7 @@ export default function PackagesPage() {
       <div className="relative h-[50vh] md:h-[60vh] lg:h-[70vh] w-full">
         <Image
           src="/images/wadi-rum-hero.jpg"
-          alt="Wadi Rum tour packages and combined experiences"
+          alt={t("packages.hero.imageAlt")}
           fill
           priority
           className="object-cover"
@@ -52,7 +52,7 @@ export default function PackagesPage() {
                 <div className="relative h-48">
                   <Image
                     src="/images/full-day-jeep.jpg"
-                    alt="Classic Adventure Package"
+                    alt={t("packages.classicAdventure.imageAlt")}
                     fill
                     className="object-cover"
                   />
@@ -75,7 +75,7 @@ export default function PackagesPage() {
             <AnimateOnScroll animation="fade-in" delay={200}>
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative h-48">
-                  <Image src="/images/beduin-way.jpg" alt="Desert Explorer Package" fill className="object-cover" />
+                  <Image src="/images/beduin-way.jpg" alt={t("packages.desertExplorer.imageAlt")} fill className="object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{t("packages.desertExplorer.title")}</h3>
@@ -97,7 +97,7 @@ export default function PackagesPage() {
                 <div className="relative h-48">
                   <Image
                     src="/images/blog-stargazing.jpg"
-                    alt="Bedouin Experience Package"
+                    alt={t("packages.bedouinExperience.imageAlt")}
                     fill
                     className="object-cover"
                   />
@@ -122,7 +122,7 @@ export default function PackagesPage() {
                 <div className="relative h-48">
                   <Image
                     src="/images/sleeping-under-stars.png"
-                    alt="Bivouac Camping Package"
+                    alt={t("packages.bivouacCamping.imageAlt")}
                     fill
                     className="object-cover"
                   />
@@ -155,7 +155,7 @@ export default function PackagesPage() {
                 <div className="relative h-48">
                   <Image
                     src="/images/wadi-rum-landscape.jpg"
-                    alt="Wadi Rum Discovery Package"
+                    alt={t("packages.wadiRumDiscovery.imageAlt")}
                     fill
                     className="object-cover"
                   />
@@ -180,7 +180,7 @@ export default function PackagesPage() {
                 <div className="relative h-48">
                   <Image
                     src="/images/jebel-um-addami.jpg"
-                    alt="Ultimate Adventure Package"
+                    alt={t("packages.ultimateAdventure.imageAlt")}
                     fill
                     className="object-cover"
                   />
@@ -203,7 +203,7 @@ export default function PackagesPage() {
             <AnimateOnScroll animation="fade-in" delay={300}>
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative h-48">
-                  <Image src="/images/burdah-arch.jpg" alt="Jordan Heights Package" fill className="object-cover" />
+                  <Image src="/images/burdah-arch.jpg" alt={t("packages.jordanHeights.imageAlt")} fill className="object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{t("packages.jordanHeights.title")}</h3>
